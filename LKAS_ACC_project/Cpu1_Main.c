@@ -27,6 +27,7 @@
 #include "Ifx_Types.h"
 #include "IfxCpu.h"
 #include "IfxScuWdt.h"
+#include <Sensor_input/Tof.h>
 
 extern IfxCpu_syncEvent g_cpuSyncEvent;
 
@@ -38,12 +39,18 @@ void core1_main(void)
      * Enable the watchdog and service it periodically if it is required
      */
     IfxScuWdt_disableCpuWatchdog(IfxScuWdt_getCpuWatchdogPassword());
+    IfxScuWdt_disableSafetyWatchdog(IfxScuWdt_getSafetyWatchdogPassword());
     
     /* Wait for CPU sync event */
     IfxCpu_emitEvent(&g_cpuSyncEvent);
     IfxCpu_waitEvent(&g_cpuSyncEvent, 1);
+    Init_ToF();
     
     while(1)
     {
+        int n_distance = getTofDistance();
+        if(n_distance > 0){
+            distance = n_distance;
+        }
     }
 }

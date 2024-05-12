@@ -1,34 +1,87 @@
-#include "ASCLIN.h"
+#include "debug_UART.h"
+
+
+#define BUFSIZE     128
 
 static IfxAsclin_Asc g_ascHandle3;
-static IfxStdIf_DPipe g_ascStandardInterface;
-
+static IfxStdIf_DPipe  g_ascStandardInterface;
 
 uint8 g_uartTxBuffer[ASC_TX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
 uint8 g_uartRxBuffer[ASC_RX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
-uint8 g_uartTxBuffer_0[ASC_TX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
-uint8 g_uartRxBuffer_0[ASC_RX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
-uint8 g_uartTxBuffer_1[ASC_TX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
-uint8 g_uartRxBuffer_1[ASC_RX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
 
+#define ISR_PRIORITY_ASCLIN_TX      8                                       /* Priority for interrupt ISR Transmit  */
+#define ISR_PRIORITY_ASCLIN_RX      4                                       /* Priority for interrupt ISR Receive   */
+#define ISR_PRIORITY_ASCLIN_ER      12                                      /* Priority for interrupt ISR Errors    */
 
+void Init_Mystdio(void)
+{
+    _init_uart3();
+}
 
-IFX_INTERRUPT(asclin3TxISR, 0, ISR_PRIORITY_ASCLIN_TX);
+void my_puts(const char *str)
+{
+    char buffer[BUFSIZE];
+    char *ptr;
+
+    sprintf(buffer, "%s\r\n", str);
+
+    for (ptr = buffer; *ptr; ++ptr)
+        _out_uart3((const unsigned char) *ptr);
+}
+
+int my_printf(const char *format, ...)
+{
+    if (!Ifx_g_console.standardIo->txDisabled)
+    {
+        char      message[STDIF_DPIPE_MAX_PRINT_SIZE + 1];
+        char      message2[STDIF_DPIPE_MAX_PRINT_SIZE + 1]; // add \r before \n
+        Ifx_SizeT count;
+        va_list   args;
+        va_start(args, format);
+        vsprintf((char *)message, format, args);
+        va_end(args);
+        int j = 0;
+        for(int i=0; message[i]; i++)
+        {
+            if(message[i] == '\n')
+            {
+                message2[j++] = '\r';
+                message2[j++] = message[i];
+            }
+            else
+                message2[j++] = message[i];
+        }
+        message2[j] = '\0';
+        count = (Ifx_SizeT)strlen(message2);
+        IFX_ASSERT(IFX_VERBOSE_LEVEL_ERROR, count < STDIF_DPIPE_MAX_PRINT_SIZE);
+
+        return IfxStdIf_DPipe_write(Ifx_g_console.standardIo, (void *)message2, &count, TIME_INFINITE);
+    }
+    else
+    {
+        return TRUE;
+    }
+}
+
+IFX_INTERRUPT(asclin3TxISR, 2, ISR_PRIORITY_ASCLIN_TX);
 void asclin3TxISR(void)
 {
     IfxAsclin_Asc_isrTransmit(&g_ascHandle3);
 }
-IFX_INTERRUPT(asclin3RxISR, 0, ISR_PRIORITY_ASCLIN_RX);
+
+IFX_INTERRUPT(asclin3RxISR, 2, ISR_PRIORITY_ASCLIN_RX);
 void asclin3RxISR(void)
 {
     IfxAsclin_Asc_isrReceive(&g_ascHandle3);
 }
-IFX_INTERRUPT(asclin3ErrISR, 0, ISR_PRIORITY_ASCLIN_ER);
+
+IFX_INTERRUPT(asclin3ErrISR, 2, ISR_PRIORITY_ASCLIN_ER);
 void asclin3ErrISR(void)
 {
     while(1);
 }
 
+/* This function initializes the ASCLIN UART module */
 void _init_uart3(void)
 {
     IfxAsclin_Asc_Config ascConf;
@@ -48,19 +101,17 @@ void _init_uart3(void)
     ascConf.interrupt.txPriority = ISR_PRIORITY_ASCLIN_TX;  /* Set the interrupt priority for TX events             */
     ascConf.interrupt.rxPriority = ISR_PRIORITY_ASCLIN_RX;  /* Set the interrupt priority for RX events             */
     ascConf.interrupt.erPriority = ISR_PRIORITY_ASCLIN_ER;  /* Set the interrupt priority for Error events          */
-    ascConf.interrupt.typeOfService = IfxSrc_Tos_cpu0;
+    ascConf.interrupt.typeOfService = IfxSrc_Tos_cpu2;
 
     /* Pin configuration */
     const IfxAsclin_Asc_Pins pins = {
             .cts        = NULL_PTR,                         /* CTS pin not used                                     */
             .ctsMode    = IfxPort_InputMode_pullUp,
             .rx         = &IfxAsclin3_RXD_P32_2_IN ,        /* Select the pin for RX connected to the USB port      */
-//            .rx         = &IfxAsclin3_RXC_P20_3_IN ,        /* Select the pin for RX connected to the USB port      */
             .rxMode     = IfxPort_InputMode_pullUp,         /* RX pin                                               */
             .rts        = NULL_PTR,                         /* RTS pin not used                                     */
             .rtsMode    = IfxPort_OutputMode_pushPull,
             .tx         = &IfxAsclin3_TX_P15_7_OUT,         /* Select the pin for TX connected to the USB port      */
-//            .tx         = &IfxAsclin3_TX_P20_0_OUT,         /* Select the pin for TX connected to the USB port      */
             .txMode     = IfxPort_OutputMode_pushPull,      /* TX pin                                               */
             .pinDriver  = IfxPort_PadDriver_cmosAutomotiveSpeed1
     };
@@ -75,31 +126,38 @@ void _init_uart3(void)
     /* Init ASCLIN module */
     IfxAsclin_Asc_initModule(&g_ascHandle3, &ascConf);          /* Initialize the module with the given configuration   */
 
+    /* Initialize the Standard Interface */
     IfxAsclin_Asc_stdIfDPipeInit(&g_ascStandardInterface, &g_ascHandle3);
 
+    /* Initialize the Console */
     Ifx_Console_init(&g_ascStandardInterface);
 }
 
-void _out_uart3(const uint32_t chr)
+/* Send character CHR via the serial line */
+void _out_uart3(const unsigned char chr)
 {
+ //   while(IfxAsclin_Asc_canWriteCount(&g_ascHandle3, 1, TIME_INFINITE) != TRUE);
     IfxAsclin_Asc_blockingWrite(&g_ascHandle3, chr);
 }
 
-void _out_uart3_2(const uint32_t value1, const uint32_t value2)
-{
-    // 두 개의 4바이트 값을 하나의 4바이트 변수에 각각 담음
-    uint32_t data = (value1 << 16) | (value2 & 0xFFFF);
-
-    // 상위 4바이트를 먼저 전송
-    IfxAsclin_Asc_blockingWrite(&g_ascHandle3, data >> 24);
-    IfxAsclin_Asc_blockingWrite(&g_ascHandle3, (data >> 16) & 0xFF);
-
-    // 다음 하위 4바이트를 전송
-    IfxAsclin_Asc_blockingWrite(&g_ascHandle3, (data >> 8) & 0xFF);
-    IfxAsclin_Asc_blockingWrite(&g_ascHandle3, data & 0xFF);
-}
-
-uint32_t _in_uart3(void)
+/* Receive (and wait for) a character from the serial line */
+unsigned char _in_uart3(void)
 {
     return IfxAsclin_Asc_blockingRead(&g_ascHandle3);
+}
+
+int _poll_uart3(unsigned char *chr)
+{
+    unsigned char ch;
+    Ifx_SizeT count = 1;
+    int res = 0;
+
+//    res = IfxAsclin_Asc_read(&g_ascHandle3, &ch, &count, TIME_INFINITE);
+    res = IfxAsclin_Asc_read(&g_ascHandle3, &ch, &count, 10);
+    if(res == TRUE)
+    {
+        *chr = ch;
+    }
+
+    return res;
 }

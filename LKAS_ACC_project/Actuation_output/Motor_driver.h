@@ -61,4 +61,4 @@ IFX_EXTERN App_GtmTomPwmHl g_GtmTomPwmHl;
 IFX_EXTERN void GtmTomPwmHl_init(void);
 IFX_EXTERN void GtmTomPwmHl_run(void);
 
-#endif /
+#endif

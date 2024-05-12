@@ -3,6 +3,7 @@
 /***********************************************************************/
 #include "AppScheduling.h"
 #include "Driver_Stm.h"
+#include <Sensor_input/Tof.h>
 
 /***********************************************************************/
 /*Define*/
@@ -23,10 +24,12 @@ typedef struct
 static void AppTask1ms(void);
 static void AppTask10ms(void);
 static void AppTask100ms(void);
+static void AppTask1000ms(void);
 /***********************************************************************/
 /*Variable*/
 /***********************************************************************/
 TestCnt stTestCnt;
+int t = 0;
 /***********************************************************************/
 /*Function*/
 /***********************************************************************/
@@ -48,9 +51,15 @@ static void AppTask100ms(void)
     stTestCnt.u32nuCnt100ms++;
 }
 
+static void AppTask1000ms(void)
+{
+    stTestCnt.u32nuCnt100ms++;
+    t++;
+
+}
+
 void AppScheduling(void)
 {
-    AppNoTask();
     if(stSchedulingInfo.u8nuScheduling1msFlag == 1u)
     {
         stSchedulingInfo.u8nuScheduling1msFlag = 0u;
@@ -65,6 +74,11 @@ void AppScheduling(void)
         {
             stSchedulingInfo.u8nuScheduling100msFlag = 0u;
             AppTask100ms();
+        }
+        if(stSchedulingInfo.u8nuScheduling1000msFlag == 1u)
+        {
+            stSchedulingInfo.u8nuScheduling1000msFlag = 0u;
+            AppTask1000ms();
         }
     }
 }
