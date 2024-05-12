@@ -52,7 +52,7 @@ uint32 DataAB_prev2, CntAB2 = 0;
 
 float32 right_theta, left_theta;
 int Pos_deg, Pos_deg2;
-extern float32 Pos_rad, Pos_rad2;
+float32 Pos_rad, Pos_rad2;
 
 /*********************************************************************************************************************/
 /*------------------------------------------------Function Prototypes------------------------------------------------*/

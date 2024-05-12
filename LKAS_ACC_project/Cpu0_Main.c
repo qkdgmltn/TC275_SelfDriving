@@ -24,17 +24,19 @@
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
  * IN THE SOFTWARE.
  *********************************************************************************************************************/
-#include <Sensor_input/Tof.h>
 #include "Ifx_Types.h"
 #include "IfxCpu.h"
 #include "IfxScuWdt.h"
+#include <Sensor_input/Tof.h>
+#include <Sensor_input/Encoder.h>
 #include <Situation_decision/AppScheduling.h>
 #include <Situation_decision/Driver_Stm.h>
 #include <Actuation_output/Motor_driver.h>
-#include <Sensor_input/ASCLIN.h>
-#include <Sensor_input/Encoder.h>
+
+int distance = 0;
 
 IfxCpu_syncEvent g_cpuSyncEvent = 0;
+
 
 void core0_main(void)
 {
@@ -52,7 +54,6 @@ void core0_main(void)
 
     Driver_Stm_Init();
     GtmTomPwmHl_init();
-    _init_uart3();
     Encoder_init();
 
     while(1)
