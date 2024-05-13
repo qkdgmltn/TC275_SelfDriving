@@ -56,6 +56,8 @@ float32 Left_Pos_rad, Right_Pos_rad;
 
 float32 Left_velocity, Right_velocity;
 
+float32 Left_velocity_mps, Right_velocity_mps;
+
 float32 Left_Pos_rad_prev, Left_velocity_prev, Left_velocity_rpm;
 float32 Right_Pos_rad_prev, Right_velocity_prev, Right_velocity_rpm;
 
@@ -172,6 +174,8 @@ void Encoder_cnt_right(void){
 
 }
 
+// 바퀴 직경 : 4.4cm = 0.044m
+// rad/s -> m/s 변환 : V(속도 m/s) = D(바퀴직경 m)*ω(각속도 rad/s)/2
 
 void velocity_cal_left(void){
     Left_velocity = (Left_Pos_rad - Left_Pos_rad_prev)/0.001;
@@ -183,6 +187,8 @@ void velocity_cal_left(void){
     Left_velocity_rpm = (uint32)(60*Left_velocity/(2*3.141592));
 
     Left_Pos_rad_prev = Left_Pos_rad;
+
+    Left_velocity_mps = 0.044 * Left_velocity / 2;
 }
 
 void velocity_cal_right(void){
@@ -195,4 +201,6 @@ void velocity_cal_right(void){
     Right_velocity_rpm = (uint32)(60*Right_velocity/(2*3.141592));
 
     Right_Pos_rad_prev = Right_Pos_rad;
+
+    Right_velocity_mps = 0.044 * Right_velocity / 2;
 }

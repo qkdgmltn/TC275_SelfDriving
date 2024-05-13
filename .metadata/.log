@@ -4398,3 +4398,39 @@ java.lang.Exception: Resource '/LKAS_ACC_project_hadong/.settings/language.setti
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-05-13 16:48:54.871
 !MESSAGE Indexed 'LKAS_ACC_project_hadong' (93 sources, 489 headers) in 18 sec: 111,007 declarations; 72,315 references; 10 unresolved inclusions; 2,669 syntax errors; 5,527 unresolved names (2.9%)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:35:56.830
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project LKAS_ACC_project boosted in 2240 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:35:56.933
+!MESSAGE Include paths were discovered in 99 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:37:40.327
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project LKAS_ACC_project boosted in 984 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:37:40.366
+!MESSAGE Include paths were discovered in 38 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:39:01.769
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project LKAS_ACC_project boosted in 259 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:39:01.821
+!MESSAGE Include paths were discovered in 50 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:40:12.003
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project LKAS_ACC_project boosted in 827 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:40:12.042
+!MESSAGE Include paths were discovered in 37 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:40:49.536
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project LKAS_ACC_project boosted in 107 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:40:49.569
+!MESSAGE Include paths were discovered in 32 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:41:52.999
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project LKAS_ACC_project boosted in 1006 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:41:53.029
+!MESSAGE Include paths were discovered in 29 milliseconds.
