@@ -5,7 +5,7 @@ float radius;
 float ang_spd;
 float left_velo;
 float right_velo;
-float dist;
+
 
 velo_wheel cur_velo_wheel;
 

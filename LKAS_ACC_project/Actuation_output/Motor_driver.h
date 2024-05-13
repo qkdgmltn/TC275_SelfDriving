@@ -32,8 +32,9 @@
 /*-----------------------------------------------Function Prototypes-------------------------------------------------*/
 /*********************************************************************************************************************/
 void initGtmTomPwm(void);
-//void fadeLED(void);
-//void makeSound(unsigned int soundIdx);
-//void Init_DCMotors(void);
+void setDutyCycleA(float);
+void setDutyCycleB(float);
+
+void Init_DCMotors(void);
 
 #endif /* GTM_TOM_PWM_H_ */

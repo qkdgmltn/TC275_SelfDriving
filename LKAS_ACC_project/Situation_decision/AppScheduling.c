@@ -4,7 +4,8 @@
 #include "AppScheduling.h"
 #include "Driver_Stm.h"
 #include <Control_section/Motor_control.h>
-#include <Actucation_output/Motor_driver.h>
+#include <Actuation_output/Motor_driver.h>
+#include <Sensor_input/Encoder.h>
 
 /***********************************************************************/
 /*Define*/
@@ -46,7 +47,8 @@ static void AppNoTask(void){
 static void AppTask1ms(void)
 {
     stTestCnt.u32nuCnt1ms++;
-
+    setDutyCycleA(0.5);
+    setDutyCycleB(0.5);
     velocity_cal_left();
     velocity_cal_right();
 

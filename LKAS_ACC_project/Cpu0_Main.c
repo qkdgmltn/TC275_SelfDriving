@@ -53,8 +53,10 @@ void core0_main(void)
     IfxCpu_waitEvent(&g_cpuSyncEvent, 1);
 
     Driver_Stm_Init();
-    GtmTomPwmHl_init();
+    initGtmTomPwm();
     Encoder_init();
+    Init_DCMotors();
+    initGtmTomPwm();
 
     while(1)
     {
