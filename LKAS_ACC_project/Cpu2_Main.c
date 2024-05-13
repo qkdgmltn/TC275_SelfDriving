@@ -30,6 +30,7 @@
 #include <Situation_decision/debug_UART.h>
 #include <Sensor_input/Tof.h>
 #include <Situation_decision/AppScheduling.h>
+#include <Control_section/Motor_control.h>
 
 extern IfxCpu_syncEvent g_cpuSyncEvent;
 
@@ -48,6 +49,8 @@ void core2_main(void)
 
     while(1)
     {
-        my_printf(" Distance: %d,  Time: %d\n", distance,t);
+        my_printf(" Distance: %d,  Time: %d\n" , distance,t);
+        int prev_left = cur_velo_wheel.v_left;
+        int prev_right = cur_velo_wheel.v_right;
     }
 }

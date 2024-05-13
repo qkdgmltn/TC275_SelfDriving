@@ -1,0 +1,53 @@
+#include "debug_UART.h"
+
+#define BUFSIZE     128
+
+void Init_Mystdio(void)
+{
+    _init_uart3();
+}
+
+void my_puts(const char *str)
+{
+    char buffer[BUFSIZE];
+    char *ptr;
+
+    sprintf(buffer, "%s\r\n", str);
+
+    for (ptr = buffer; *ptr; ++ptr)
+        _out_uart3((const unsigned char) *ptr);
+}
+
+int my_printf(const char *format, ...)
+{
+    if (!Ifx_g_console.standardIo->txDisabled)
+    {
+        char      message[STDIF_DPIPE_MAX_PRINT_SIZE + 1];
+        char      message2[STDIF_DPIPE_MAX_PRINT_SIZE + 1]; // add \r before \n
+        Ifx_SizeT count;
+        va_list   args;
+        va_start(args, format);
+        vsprintf((char *)message, format, args);
+        va_end(args);
+        int j = 0;
+        for(int i=0; message[i]; i++)
+        {
+            if(message[i] == '\n')
+            {
+                message2[j++] = '\r';
+                message2[j++] = message[i];
+            }
+            else
+                message2[j++] = message[i];
+        }
+        message2[j] = '\0';
+        count = (Ifx_SizeT)strlen(message2);
+        IFX_ASSERT(IFX_VERBOSE_LEVEL_ERROR, count < STDIF_DPIPE_MAX_PRINT_SIZE);
+
+        return IfxStdIf_DPipe_write(Ifx_g_console.standardIo, (void *)message2, &count, TIME_INFINITE);
+    }
+    else
+    {
+        return TRUE;
+    }
+}

@@ -1,0 +1,203 @@
+#include <string.h>
+#include <Ifx_reg.h>
+#include "ToF.h"
+//#include "isr_priority.h"
+
+static const unsigned char TOF_length = 16;
+static unsigned int rxBufIdx = 0;
+static IfxAsclin_Asc g_ascHandle1;
+
+int prev_distance = 0;
+
+uint8 g_uartTxBuffer_1[ASC_TX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
+uint8 g_uartRxBuffer_1[ASC_RX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
+
+static unsigned char gBuf_tof[16] = { 0 };
+
+void Init_ToF()
+{
+    _init_uart1();
+}
+
+IFX_INTERRUPT(asclin1TxISR, 1, ISR_PRIORITY_ASCLIN_TOF_TX);
+void asclin1TxISR(void)
+{
+    IfxAsclin_Asc_isrTransmit(&g_ascHandle1);
+}
+
+IFX_INTERRUPT(asclin1ErrISR, 1, ISR_PRIORITY_ASCLIN_TOF_ER);
+void asclin1ErrISR(void)
+{}
+
+void _init_uart1(void)
+{
+    IfxAsclin_Asc_Config ascConf;
+
+    /* Set default configurations */
+    IfxAsclin_Asc_initModuleConfig(&ascConf, &MODULE_ASCLIN1); /* Initialize the structure with default values      */
+
+    /* Set the desired baud rate */
+    ascConf.baudrate.baudrate = TOF_BAUDRATE;                                   /* Set the baud rate in bit/s       */
+    ascConf.baudrate.oversampling = IfxAsclin_OversamplingFactor_16;            /* Set the oversampling factor      */
+
+    /* Configure the sampling mode */
+    ascConf.bitTiming.medianFilter = IfxAsclin_SamplesPerBit_three;             /* Set the number of samples per bit*/
+    ascConf.bitTiming.samplePointPosition = IfxAsclin_SamplePointPosition_8;    /* Set the first sample position    */
+
+    /* ISR priorities and interrupt target */
+    ascConf.interrupt.txPriority = ISR_PRIORITY_ASCLIN_TOF_TX;  /* Set the interrupt priority for TX events             */
+    ascConf.interrupt.rxPriority = ISR_PRIORITY_ASCLIN_TOF_RX;  /* Set the interrupt priority for RX events             */
+    ascConf.interrupt.erPriority = ISR_PRIORITY_ASCLIN_TOF_ER;  /* Set the interrupt priority for Error events          */
+    ascConf.interrupt.typeOfService = IfxSrc_Tos_cpu1;
+
+    /* Pin configuration */
+    const IfxAsclin_Asc_Pins pins = {
+            .cts        = NULL_PTR,                         /* CTS pin not used                                     */
+            .ctsMode    = IfxPort_InputMode_pullUp,
+            .rx         = &IfxAsclin1_RXA_P15_1_IN ,        /* Select the pin for RX connected to the USB port      */
+            .rxMode     = IfxPort_InputMode_pullUp,         /* RX pin                                               */
+            .rts        = NULL_PTR,                         /* RTS pin not used                                     */
+            .rtsMode    = IfxPort_OutputMode_pushPull,
+            .tx         = &IfxAsclin1_TX_P15_0_OUT,         /* Select the pin for TX connected to the USB port      */
+            .txMode     = IfxPort_OutputMode_pushPull,      /* TX pin                                               */
+            .pinDriver  = IfxPort_PadDriver_cmosAutomotiveSpeed1
+    };
+    ascConf.pins = &pins;
+
+    /* FIFO buffers configuration */
+    ascConf.txBuffer = g_uartTxBuffer_1;                      /* Set the transmission buffer                          */
+    ascConf.txBufferSize = ASC_TX_BUFFER_SIZE;              /* Set the transmission buffer size                     */
+    ascConf.rxBuffer = g_uartRxBuffer_1;                      /* Set the receiving buffer                             */
+    ascConf.rxBufferSize = ASC_RX_BUFFER_SIZE;              /* Set the receiving buffer size                        */
+
+    /* Init ASCLIN module */
+    IfxAsclin_Asc_initModule(&g_ascHandle1, &ascConf);          /* Initialize the module with the given configuration   */
+}
+
+/* Send character CHR via the serial line */
+void _out_uart1(const unsigned char chr)
+{
+ //   while(IfxAsclin_Asc_canWriteCount(&g_ascHandle3, 1, TIME_INFINITE) != TRUE);
+    IfxAsclin_Asc_blockingWrite(&g_ascHandle1, chr);
+}
+
+/* Receive (and wait for) a character from the serial line */
+unsigned char _in_uart1(void)
+{
+    unsigned char ch;
+
+    /* wait for a new character */
+    while (_poll_uart1(&ch) == 0);
+
+    return ch;
+}
+
+int _poll_uart1(unsigned char *chr)
+{
+    unsigned char ch;
+    Ifx_SizeT count = 0;
+    int res = 0;
+
+    count = IfxAsclin_getRxFifoFillLevel(g_ascHandle1.asclin);
+    if(count >= 1)
+    {
+        IfxAsclin_read8(g_ascHandle1.asclin, &ch, 1);
+        *chr = ch;
+        res = TRUE;
+    }
+    else
+        res = FALSE;
+    return res;
+}
+
+IFX_INTERRUPT(asclin1RxISR, 1, ISR_PRIORITY_ASCLIN_TOF_RX);
+void asclin1RxISR(void)
+{
+    static unsigned char rxBuf[16] = { 0 };
+
+    //IfxAsclin_Asc_isrReceive(&g_ascHandle1);
+    unsigned char c = (unsigned char) _in_uart1();
+
+    rxBuf[rxBufIdx] = c;
+    ++rxBufIdx;
+
+    /* 버퍼가 꽉 차면, buf_tof에 복사 */
+    if (rxBufIdx == TOF_length) {
+        memcpy(gBuf_tof, rxBuf, TOF_length);
+        rxBufIdx = 0;
+    }
+}
+
+/* 수신 데이터가 정상이면 1, 그렇지 않으면 0 반환 */
+static int verifyCheckSum (unsigned char data[])
+{
+    unsigned char checksum = 0;
+    for (int i = 0; i < TOF_length-1; i++)
+    {
+        checksum += data[i];
+    }
+    if (data[0] == 0x57 && data[1] == 0x0 && data[2] == 0xFF)
+    {
+        return checksum == data[TOF_length-1];
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+/* 유효 거리인 경우 1 반환, 그렇지 않으면 0 반환 */
+static int checkTofStrength (unsigned char data[])
+{
+    int TOF_distance = data[8] | (data[9] << 8) | (data[10] << 16);
+    int TOF_signal_strength = data[12] | (data[13] << 8);
+    /* when distance over 2m - out of range */
+    if (TOF_signal_strength != 0 && TOF_distance != 0xFFFFF6u)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+/* Return Distance(mm) */
+int getTofDistance ()
+{
+    int TOF_distance = 0;
+    unsigned char buf_ToF[TOF_length];
+
+    /* copy buf_tof into tmp */
+    memcpy(buf_ToF, gBuf_tof, TOF_length);
+
+    /* for debugging */
+//     for (int i = 0; i < 16; i++) {
+//         my_printf("%.2X ", buf_ToF[i]);
+//     }
+
+    if (!verifyCheckSum(buf_ToF))
+    {
+        return -1;
+    }
+    if (!checkTofStrength(buf_ToF))
+    {
+        return -2;
+    }
+
+    TOF_distance = buf_ToF[8] | (buf_ToF[9] << 8) | (buf_ToF[10] << 16);
+    TOF_distance = LPF(prev_distance, TOF_distance, 0.001, 200);
+
+    int difference = TOF_distance - prev_distance;
+    if(abs(difference) > 3){
+        prev_distance = TOF_distance;
+        return TOF_distance;
+    }
+    return prev_distance;
+}
+
+uint32 LPF(int prev_dist, int dist, double Ts, int cf){
+    return (uint32)(1-Ts*cf)*prev_dist+Ts*cf*dist;
+}
+
+

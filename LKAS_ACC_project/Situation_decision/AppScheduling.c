@@ -3,7 +3,7 @@
 /***********************************************************************/
 #include "AppScheduling.h"
 #include "Driver_Stm.h"
-#include <Sensor_input/Tof.h>
+#include <Control_section/Motor_control.h>
 
 /***********************************************************************/
 /*Define*/
@@ -42,7 +42,7 @@ static void AppTask1ms(void)
 static void AppTask10ms(void)
 {
     stTestCnt.u32nuCnt10ms++;
-
+    calculate_speed(cur_velo_wheel.v_left,cur_velo_wheel.v_right);
 }
 
 
@@ -55,7 +55,6 @@ static void AppTask1000ms(void)
 {
     stTestCnt.u32nuCnt100ms++;
     t++;
-
 }
 
 void AppScheduling(void)

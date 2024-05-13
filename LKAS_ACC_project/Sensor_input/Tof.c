@@ -7,6 +7,8 @@ static const unsigned char TOF_length = 16;
 static unsigned int rxBufIdx = 0;
 static IfxAsclin_Asc g_ascHandle1;
 
+int prev_distance = 0;
+
 uint8 g_uartTxBuffer_1[ASC_TX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
 uint8 g_uartRxBuffer_1[ASC_RX_BUFFER_SIZE + sizeof(Ifx_Fifo) + 8];
 
@@ -184,8 +186,23 @@ int getTofDistance ()
     }
 
     TOF_distance = buf_ToF[8] | (buf_ToF[9] << 8) | (buf_ToF[10] << 16);
+//    TOF_distance = LPF(prev_distance, TOF_distance, 0.001, 200);
+    if(TOF_distance <= 60){
+        int difference = TOF_distance - prev_distance;
+        if(abs(difference) > 3){
+            prev_distance = TOF_distance;
+            return TOF_distance;
+        }
+        return prev_distance;
+    }
+    else{
+        return prev_distance;
+    }
 
-    return TOF_distance;
+}
+
+uint32 LPF(int prev_dist, int dist, double Ts, int cf){
+    return (uint32)(1-Ts*cf)*prev_dist+Ts*cf*dist;
 }
 
 

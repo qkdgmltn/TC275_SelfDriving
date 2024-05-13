@@ -1,0 +1,32 @@
+#include "Motor_control.h"
+
+velo_wheel calculate_speed(float velo_l, float velo_r, float distance) {
+
+    velo_wheel new_wheel_velo;
+    /* decide the trajectory */
+
+    /* turn right */
+    if (dist - WALL_DISTANCE < WALL_MARGIN) {
+        radius = (velo_r + velo_l) / (2 * (velo_r - velo_l));
+        ang_spd = (velo_r - velo_l) / L;
+
+        new_wheel_velo.v_left = ang_spd * (radius + 0.5 * L);
+        new_wheel_velo.v_right = ang_spd * (radius - 0.5 * L);
+    }
+
+    /* turn left */
+    else if (dist - WALL_DISTANCE > WALL_MARGIN) {
+        radius = (velo_l + velo_r) / (2 * (velo_l - velo_r));
+        ang_spd = (velo_l - velo_r) / L;
+
+        new_wheel_velo.v_left = ang_spd * (radius - 0.5 * L);
+        new_wheel_velo.v_right = ang_spd * (radius + 0.5 * L);
+    }
+    /* go straight */
+    else {
+        new_wheel_velo.v_left = DEFAULT_SPEED;
+        new_wheel_velo.v_right = DEFAULT_SPEED;
+    }
+
+    return new_wheel_velo;
+}
