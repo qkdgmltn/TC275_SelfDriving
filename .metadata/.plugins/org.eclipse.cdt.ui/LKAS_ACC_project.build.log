@@ -1,8 +1,72 @@
-AURIX Flasher Software Tool 1.0.8.0, built on 2023-07-07 ¿ÀÈÄ 11:18:22
-Connected to device... [TRICORE] DAS JTAG SHIELDBUDDY TC275
-::Loading HEX file .......... (Pass)
-::Erasing Flash memory .......... (Pass)
-::Programming Flash memory .......... (Pass)
-Overall time: 1857 ms
-AURIXFlasher Exit Status: Pass
-Flashing was successfull
+19:01:39 **** Incremental Build of configuration TriCore Debug (TASKING) for project LKAS_ACC_project ****
+make --output-sync -j12 all 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): control program v1.1r8 Build 22011964
+ctc W505: ["../Sensor_input/Encoder.c" 183/21] implicit declaration of function "LPF"
+Building file: ../Sensor_input/Encoder.c
+ctc W577: ["../Sensor_input/Encoder.c" 183/24] calling a function without a prototype
+ctc W560: ["../Sensor_input/Encoder.c" 183/19] possible truncation at implicit conversion to type "float"
+Invoking: TASKING C/C++ Compiler
+cctc -cs --dep-file="Sensor_input/Encoder.d" --misrac-version=2004 -D__CPU__=tc27xd "-fC:/Users/user/AURIX-v1.9.20-workspace/TC275_SelfDriving/LKAS_ACC_project/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc27xd -Y0 -N0 -Z0 -o "Sensor_input/Encoder.src" "../Sensor_input/Encoder.c" && \
+ctc W560: ["../Sensor_input/Encoder.c" 187/23] possible truncation at implicit conversion to type "float"
+ctc W505: ["../Sensor_input/Encoder.c" 197/22] implicit declaration of function "LPF"
+ctc W577: ["../Sensor_input/Encoder.c" 197/25] calling a function without a prototype
+ctc W560: ["../Sensor_input/Encoder.c" 197/20] possible truncation at implicit conversion to type "float"
+ctc W560: ["../Sensor_input/Encoder.c" 201/24] possible truncation at implicit conversion to type "float"
+0 errors, 8 warnings
+if [ -f "Sensor_input/Encoder.d" ]; then sed.exe -r  -e 's/\b(.+\.o)\b/Sensor_input\/\1/g' -e 's/\\/\//g' -e 's/\/\//\//g' -e 's/"//g' -e 's/([a-zA-Z]:\/)/\L\1/g' -e 's/\d32:/@TARGET_DELIMITER@/g; s/\\\d32/@ESCAPED_SPACE@/g; s/\d32/\\\d32/g; s/@ESCAPED_SPACE@/\\\d32/g; s/@TARGET_DELIMITER@/\d32:/g' "Sensor_input/Encoder.d" > "Sensor_input/Encoder.d_sed" && cp "Sensor_input/Encoder.d_sed" "Sensor_input/Encoder.d" && rm -f "Sensor_input/Encoder.d_sed" 2>/dev/null; else echo 'No dependency file to process';fi
+Finished building: ../Sensor_input/Encoder.c
+ 
+Building file: ../Situation_decision/AppScheduling.c
+TASKING VX-toolset for AURIX Development Studio (non-commercial): control program v1.1r8 Build 22011964
+ctc W505: ["../Situation_decision/AppScheduling.c" 57/5] implicit declaration of function "pid_control_left"
+ctc W577: ["../Situation_decision/AppScheduling.c" 57/21] calling a function without a prototype
+ctc W505: ["../Situation_decision/AppScheduling.c" 58/5] implicit declaration of function "pid_control_right"
+Invoking: TASKING C/C++ Compiler
+cctc -cs --dep-file="Situation_decision/AppScheduling.d" --misrac-version=2004 -D__CPU__=tc27xd "-fC:/Users/user/AURIX-v1.9.20-workspace/TC275_SelfDriving/LKAS_ACC_project/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc27xd -Y0 -N0 -Z0 -o "Situation_decision/AppScheduling.src" "../Situation_decision/AppScheduling.c" && \
+if [ -f "Situation_decision/AppScheduling.d" ]; then sed.exe -r  -e 's/\b(.+\.o)\b/Situation_decision\/\1/g' -e 's/\\/\//g' -e 's/\/\//\//g' -e 's/"//g' -e 's/([a-zA-Z]:\/)/\L\1/g' -e 's/\d32:/@TARGET_DELIMITER@/g; s/\\\d32/@ESCAPED_SPACE@/g; s/\d32/\\\d32/g; s/@ESCAPED_SPACE@/\\\d32/g; s/@TARGET_DELIMITER@/\d32:/g' "Situation_decision/AppScheduling.d" > "Situation_decision/AppScheduling.d_sed" && cp "Situation_decision/AppScheduling.d_sed" "Situation_decision/AppScheduling.d" && rm -f "Situation_decision/AppScheduling.d_sed" 2>/dev/null; else echo 'No dependency file to process';fi
+Finished building: ../Situation_decision/AppScheduling.c
+ 
+ctc W577: ["../Situation_decision/AppScheduling.c" 58/22] calling a function without a prototype
+0 errors, 4 warnings
+TASKING VX-toolset for AURIX Development Studio (non-commercial): assembler v1.1r8 Build 22011964
+Building file: Sensor_input/Encoder.src
+Invoking: TASKING Assembler
+astc -Og -Os --no-warnings= --error-limit=42 -o  "Sensor_input/Encoder.o" "Sensor_input/Encoder.src"
+Finished building: Sensor_input/Encoder.src
+ 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): control program v1.1r8 Build 22011964
+Building file: ../Actuation_output/Motor_driver.c
+Invoking: TASKING C/C++ Compiler
+cctc -cs --dep-file="Actuation_output/Motor_driver.d" --misrac-version=2004 -D__CPU__=tc27xd "-fC:/Users/user/AURIX-v1.9.20-workspace/TC275_SelfDriving/LKAS_ACC_project/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc27xd -Y0 -N0 -Z0 -o "Actuation_output/Motor_driver.src" "../Actuation_output/Motor_driver.c" && \
+if [ -f "Actuation_output/Motor_driver.d" ]; then sed.exe -r  -e 's/\b(.+\.o)\b/Actuation_output\/\1/g' -e 's/\\/\//g' -e 's/\/\//\//g' -e 's/"//g' -e 's/([a-zA-Z]:\/)/\L\1/g' -e 's/\d32:/@TARGET_DELIMITER@/g; s/\\\d32/@ESCAPED_SPACE@/g; s/\d32/\\\d32/g; s/@ESCAPED_SPACE@/\\\d32/g; s/@TARGET_DELIMITER@/\d32:/g' "Actuation_output/Motor_driver.d" > "Actuation_output/Motor_driver.d_sed" && cp "Actuation_output/Motor_driver.d_sed" "Actuation_output/Motor_driver.d" && rm -f "Actuation_output/Motor_driver.d_sed" 2>/dev/null; else echo 'No dependency file to process';fi
+Finished building: ../Actuation_output/Motor_driver.c
+ 
+Building file: Situation_decision/AppScheduling.src
+Invoking: TASKING Assembler
+astc -Og -Os --no-warnings= --error-limit=42 -o  "Situation_decision/AppScheduling.o" "Situation_decision/AppScheduling.src"
+Finished building: Situation_decision/AppScheduling.src
+ 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): assembler v1.1r8 Build 22011964
+Building file: Actuation_output/Motor_driver.src
+Invoking: TASKING Assembler
+astc -Og -Os --no-warnings= --error-limit=42 -o  "Actuation_output/Motor_driver.o" "Actuation_output/Motor_driver.src"
+Finished building: Actuation_output/Motor_driver.src
+ 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): assembler v1.1r8 Build 22011964
+Building target: LKAS_ACC_project.elf
+Invoking: TASKING Linker
+cctc --lsl-file="../Lcf_Tasking_Tricore_Tc.lsl" -Wl-Oc -Wl-OL -Wl-Ot -Wl-Ox -Wl-Oy -Wl--map-file="LKAS_ACC_project.map" -Wl-mc -Wl-mf -Wl-mi -Wl-mk -Wl-ml -Wl-mm -Wl-md -Wl-mr -Wl-mu --no-warnings= -Wl--error-limit=42 --fp-model=3 -lrt --lsl-core=vtc --exceptions --strict --anachronisms --force-c++ -Ctc27xd -o"LKAS_ACC_project.elf" -Wl-o"LKAS_ACC_project.hex:IHEX"  ./Situation_decision/AppScheduling.o ./Situation_decision/Driver_Stm.o ./Situation_decision/debug_UART.o  ./Sensor_input/Encoder.o ./Sensor_input/Tof.o  ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxAsclin_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxCcu6_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxCif_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxDsadc_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxEray_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxEth_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxGpt12_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxGtm_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxI2c_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxMsc_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxMultican_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxPort_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxPsi5_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxPsi5s_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxQspi_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxScu_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxSent_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxSmu_PinMap.o ./Libraries/iLLD/TC27D/Tricore/_PinMap/IfxVadc_PinMap.o  ./Libraries/iLLD/TC27D/Tricore/_Lib/DataHandling/Ifx_CircularBuffer.asm.o ./Libraries/iLLD/TC27D/Tricore/_Lib/DataHandling/Ifx_CircularBuffer.o ./Libraries/iLLD/TC27D/Tricore/_Lib/DataHandling/Ifx_Fifo.o  ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxAsclin_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxCcu6_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxCif_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxCpu_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxDma_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxEmem_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxEray_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxFlash_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxGtm_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxHssl_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxI2c_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxMsc_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxMtu_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxMultican_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxPort_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxPsi5_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxQspi_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxScu_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxSent_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxSmu_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxSrc_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxStm_cfg.o ./Libraries/iLLD/TC27D/Tricore/_Impl/IfxVadc_cfg.o  ./Libraries/iLLD/TC27D/Tricore/Stm/Std/IfxStm.o  ./Libraries/iLLD/TC27D/Tricore/Src/Std/IfxSrc.o  ./Libraries/iLLD/TC27D/Tricore/Scu/Std/IfxScuCcu.o ./Libraries/iLLD/TC27D/Tricore/Scu/Std/IfxScuEru.o ./Libraries/iLLD/TC27D/Tricore/Scu/Std/IfxScuWdt.o  ./Libraries/iLLD/TC27D/Tricore/Port/Std/IfxPort.o  ./Libraries/iLLD/TC27D/Tricore/Mtu/Std/IfxMtu.o  ./Libraries/iLLD/TC27D/Tricore/Gtm/Tom/Pwm/IfxGtm_Tom_Pwm.o  ./Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm.o ./Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Atom.o ./Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Cmu.o ./Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Dpll.o ./Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Tbu.o ./Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Tim.o ./Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Tom.o  ./Libraries/iLLD/TC27D/Tricore/Cpu/Trap/IfxCpu_Trap.o  ./Libraries/iLLD/TC27D/Tricore/Cpu/Std/IfxCpu.o  ./Libraries/iLLD/TC27D/Tricore/Cpu/Irq/IfxCpu_Irq.o  ./Libraries/iLLD/TC27D/Tricore/Cpu/CStart/IfxCpu_CStart0.o ./Libraries/iLLD/TC27D/Tricore/Cpu/CStart/IfxCpu_CStart1.o ./Libraries/iLLD/TC27D/Tricore/Cpu/CStart/IfxCpu_CStart2.o  ./Libraries/iLLD/TC27D/Tricore/Asclin/Std/IfxAsclin.o  ./Libraries/iLLD/TC27D/Tricore/Asclin/Asc/IfxAsclin_Asc.o  ./Libraries/Service/CpuGeneric/SysSe/Comm/Ifx_Console.o ./Libraries/Service/CpuGeneric/SysSe/Comm/Ifx_Shell.o  ./Libraries/Service/CpuGeneric/StdIf/IfxStdIf_DPipe.o ./Libraries/Service/CpuGeneric/StdIf/IfxStdIf_Pos.o ./Libraries/Service/CpuGeneric/StdIf/IfxStdIf_PwmHl.o ./Libraries/Service/CpuGeneric/StdIf/IfxStdIf_Timer.o  ./Libraries/Infra/Platform/Tricore/Compilers/CompilerDcc.o ./Libraries/Infra/Platform/Tricore/Compilers/CompilerGcc.o ./Libraries/Infra/Platform/Tricore/Compilers/CompilerGhs.o ./Libraries/Infra/Platform/Tricore/Compilers/CompilerGnuc.o ./Libraries/Infra/Platform/Tricore/Compilers/CompilerTasking.o  ./Control_section/Motor_control.o  ./Configurations/Debug/sync_on_halt.o  ./Actuation_output/Motor_driver.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./Cpu0_Main.o ./Cpu1_Main.o ./Cpu2_Main.o 
+Finished building target: LKAS_ACC_project.elf
+ 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): control program v1.1r8 Build 22011964
+Invoking: Print Size
+elfsize  "LKAS_ACC_project.elf"
+Total sizes:
+ROM: 0x6bfe (27646) = code: 0x67be (26558) + romdata: 0x440 (1088)
+RAM: 0x9bb1 (39857) = data + bss
+Finished building: LKAS_ACC_project.siz
+ 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): ELF size v1.1r8 Build 22011964
+
+19:01:41 Build Finished. 0 errors, 12 warnings. (took 1s.914ms)
+

@@ -4434,3 +4434,12 @@ java.lang.Exception: Resource '/LKAS_ACC_project_hadong/.settings/language.setti
 
 !ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 17:41:53.029
 !MESSAGE Include paths were discovered in 29 milliseconds.
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-13 18:28:40.845
+!MESSAGE Indexed 'project2_prac2' (96 sources, 497 headers) in 9.46 sec: 113,969 declarations; 78,503 references; 10 unresolved inclusions; 2,900 syntax errors; 5,527 unresolved names (2.8%)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 19:01:38.874
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project LKAS_ACC_project boosted in 1152 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2024-05-13 19:01:38.909
+!MESSAGE Include paths were discovered in 34 milliseconds.
