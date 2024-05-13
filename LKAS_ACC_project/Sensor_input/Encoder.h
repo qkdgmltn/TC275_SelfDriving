@@ -53,13 +53,17 @@
 /*External Variable*/
 /***********************************************************************/
 
+extern float32 Left_velocity, Right_velocity;
 
 
 /***********************************************************************/
 /*Global Function Prototype*/
 /***********************************************************************/
 void Encoder_init(void);
-
+void Encoder_cnt_left(void);
+void Encoder_cnt_right(void);
+void velocity_cal_left(void);
+void velocity_cal_right(void);
 
 
 #endif /* ENCODER_H_ */

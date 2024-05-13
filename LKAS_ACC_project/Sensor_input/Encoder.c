@@ -43,16 +43,22 @@
 /*********************************************************************************************************************/
 /*--------------------------------------------Private Variables/Constants--------------------------------------------*/
 /*********************************************************************************************************************/
-uint32 DataA, DataB, DataAB;
-uint32 DataAB_prev, CntAB = 0;
+uint32 Left_DataA, Left_DataB, Left_DataAB;
+uint32 Right_DataA, Right_DataB, Right_DataAB;
 
-uint32 DataA2, DataB2, DataAB2;
-uint32 DataAB_prev2, CntAB2 = 0;
-//extern int Pos_rad_prev, velocity;
+uint32 Left_DataAB_prev, Left_CntAB = 0;
+uint32 Right_DataAB_prev, Right_CntAB = 0;
 
-float32 right_theta, left_theta;
-int Pos_deg, Pos_deg2;
-float32 Pos_rad, Pos_rad2;
+float32 Left_theta, Right_theta;
+
+uint32 Left_Pos_deg, Right_Pos_deg;
+float32 Left_Pos_rad, Right_Pos_rad;
+
+float32 Left_velocity, Right_velocity;
+
+float32 Left_Pos_rad_prev, Left_velocity_prev, Left_velocity_rpm;
+float32 Right_Pos_rad_prev, Right_velocity_prev, Right_velocity_rpm;
+
 
 /*********************************************************************************************************************/
 /*------------------------------------------------Function Prototypes------------------------------------------------*/
@@ -70,112 +76,123 @@ void Encoder_init(void)
     IfxPort_setPinModeInput(Encoder_left_B, IfxPort_InputMode_pullDown);
 }
 
-void Encoder_cnt(void){
+void Encoder_cnt_left(void){
 
-    DataA = IfxPort_getPinState(Encoder_right_A);
-    DataB = IfxPort_getPinState(Encoder_right_B);
-    DataAB = (DataA << 1) | DataB;
+    Left_DataA = IfxPort_getPinState(Encoder_left_A);
+    Left_DataB = IfxPort_getPinState(Encoder_left_B);
+    Left_DataAB = (Left_DataA << 1) | Left_DataB;
 
-    if(DataAB == 0){
-        if(DataAB_prev == 1){
-            CntAB++;
+    if(Left_DataAB == 0){
+        if(Left_DataAB_prev == 1){
+            Left_CntAB++;
         }
-        if(DataAB_prev == 2){
-            CntAB--;
+        if(Left_DataAB_prev == 2){
+            Left_CntAB--;
         }
     }
-    else if(DataAB == 1){
-        if(DataAB_prev == 3){
-            CntAB++;
+    else if(Left_DataAB == 1){
+        if(Left_DataAB_prev == 3){
+            Left_CntAB++;
         }
-        if(DataAB_prev == 0){
-            CntAB--;
-        }
-    }
-    else if(DataAB == 2){
-        if(DataAB_prev == 0){
-            CntAB++;
-        }
-        if(DataAB_prev == 3){
-            CntAB--;
+        if(Left_DataAB_prev == 0){
+            Left_CntAB--;
         }
     }
-    else if(DataAB == 3){
-        if(DataAB_prev == 2){
-            CntAB++;
+    else if(Left_DataAB == 2){
+        if(Left_DataAB_prev == 0){
+            Left_CntAB++;
         }
-        if(DataAB_prev == 1){
-            CntAB--;
+        if(Left_DataAB_prev == 3){
+            Left_CntAB--;
+        }
+    }
+    else if(Left_DataAB == 3){
+        if(Left_DataAB_prev == 2){
+            Left_CntAB++;
+        }
+        if(Left_DataAB_prev == 1){
+            Left_CntAB--;
         }
     }
 
-//    if(CntAB < 10){
-//        c = '0' + CntAB;
-//    }
-//
-//    _out_uart3(c);
-//    _out_uart3('\n');
+    Left_DataAB_prev = Left_DataAB;
 
-    DataAB_prev = DataAB;
+    Left_Pos_rad = Left_CntAB * 2 * 3.141592 / 48;
+    Left_Pos_deg = (uint32)(Left_CntAB * 360 / 48);
 
-    Pos_rad = CntAB * 2 * 3.141592 / 48;
-    Pos_deg = (int)(CntAB * 360 / 48);
-
-    right_theta = Pos_rad;
+    Left_theta = Left_Pos_rad;
 
 }
 
-void Encoder_right(void){
+void Encoder_cnt_right(void){
 
-    DataA2 = IfxPort_getPinState(Encoder_left_A);
-    DataB2 = IfxPort_getPinState(Encoder_left_B);
-    DataAB2 = (DataA2 << 1) | DataB2;
+    Right_DataA = IfxPort_getPinState(Encoder_right_A);
+    Right_DataB = IfxPort_getPinState(Encoder_right_B);
+    Right_DataAB = (Right_DataA << 1) | Right_DataB;
 
-    if(DataAB2 == 0){
-        if(DataAB_prev2 == 1){
-            CntAB2++;
+    if(Right_DataAB == 0){
+        if(Right_DataAB_prev == 1){
+            Right_CntAB++;
         }
-        if(DataAB_prev2 == 2){
-            CntAB2--;
+        if(Right_DataAB_prev == 2){
+            Right_CntAB--;
         }
     }
-    else if(DataAB2 == 1){
-        if(DataAB_prev2 == 3){
-            CntAB2++;
+    else if(Right_DataAB == 1){
+        if(Right_DataAB_prev == 3){
+            Right_CntAB++;
         }
-        if(DataAB_prev2 == 0){
-            CntAB2--;
-        }
-    }
-    else if(DataAB2 == 2){
-        if(DataAB_prev2 == 0){
-            CntAB2++;
-        }
-        if(DataAB_prev2 == 3){
-            CntAB2--;
+        if(Right_DataAB_prev == 0){
+            Right_CntAB--;
         }
     }
-    else if(DataAB2 == 3){
-        if(DataAB_prev2 == 2){
-            CntAB2++;
+    else if(Right_DataAB == 2){
+        if(Right_DataAB_prev == 0){
+            Right_CntAB++;
         }
-        if(DataAB_prev2 == 1){
-            CntAB2--;
+        if(Right_DataAB_prev == 3){
+            Right_CntAB--;
+        }
+    }
+    else if(Right_DataAB == 3){
+        if(Right_DataAB_prev == 2){
+            Right_CntAB++;
+        }
+        if(Right_DataAB_prev == 1){
+            Right_CntAB--;
         }
     }
 
-//    if(CntAB < 10){
-//        c = '0' + CntAB;
-//    }
-//
-//    _out_uart3(c);
-//    _out_uart3('\n');
+    Right_DataAB_prev = Right_DataAB;
 
-    DataAB_prev2 = DataAB2;
+    Right_Pos_rad = Right_CntAB * 2 * 3.141592 / 48;
+    Right_Pos_deg = (uint32)(Right_CntAB * 360 / 48);
 
-    Pos_rad2 = CntAB2 * 2 * 3.141592 / 48;
-    Pos_deg2= (int)(CntAB2 * 360 / 48);
+    Right_theta = Right_Pos_rad;
 
-    left_theta = Pos_rad2;
+}
 
+
+void velocity_cal_left(void){
+    Left_velocity = (Left_Pos_rad - Left_Pos_rad_prev)/0.001;
+
+    Left_velocity = LPF(Left_velocity_prev, Left_velocity, 0.001, 200);
+
+    Left_velocity_prev = Left_velocity;
+
+    Left_velocity_rpm = (uint32)(60*Left_velocity/(2*3.141592));
+
+    Left_Pos_rad_prev = Left_Pos_rad;
+}
+
+void velocity_cal_right(void){
+    Right_velocity = (Right_Pos_rad - Right_Pos_rad_prev)/0.001;
+
+    Right_velocity = LPF(Right_velocity_prev, Right_velocity, 0.001, 200);
+
+    Right_velocity_prev = Right_velocity;
+
+    Right_velocity_rpm = (uint32)(60*Right_velocity/(2*3.141592));
+
+    Right_Pos_rad_prev = Right_Pos_rad;
 }

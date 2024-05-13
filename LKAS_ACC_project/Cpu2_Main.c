@@ -47,10 +47,15 @@ void core2_main(void)
     IfxCpu_waitEvent(&g_cpuSyncEvent, 1);
     Init_Mystdio();
 
+    int prev_left = cur_velo_wheel.v_left;
+    int prev_right = cur_velo_wheel.v_right;
+
     while(1)
     {
-        my_printf(" Distance: %d,  Time: %d\n" , distance,t);
-        int prev_left = cur_velo_wheel.v_left;
-        int prev_right = cur_velo_wheel.v_right;
+        if(prev_left != cur_velo_wheel.v_left || prev_right != cur_velo_wheel.v_right){
+            my_printf(" Distance: %d,  Time: %d LEFT Ref : %0.3f RIGHT Ref : %0.3f\n" , distance,t,cur_velo_wheel.v_left,cur_velo_wheel.v_right);
+        }
+        prev_left = cur_velo_wheel.v_left;
+        prev_right = cur_velo_wheel.v_right;
     }
 }

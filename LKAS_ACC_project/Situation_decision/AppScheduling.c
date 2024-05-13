@@ -4,6 +4,7 @@
 #include "AppScheduling.h"
 #include "Driver_Stm.h"
 #include <Control_section/Motor_control.h>
+#include <Actucation_output/Motor_driver.h>
 
 /***********************************************************************/
 /*Define*/
@@ -21,6 +22,7 @@ typedef struct
 /***********************************************************************/
 /*Static Function Prototype*/
 /***********************************************************************/
+static void AppNoTask(void);
 static void AppTask1ms(void);
 static void AppTask10ms(void);
 static void AppTask100ms(void);
@@ -34,21 +36,33 @@ int t = 0;
 /*Function*/
 /***********************************************************************/
 
+static void AppNoTask(void){
+
+    Encoder_cnt_left();
+    Encoder_cnt_right();
+}
+
+
 static void AppTask1ms(void)
 {
     stTestCnt.u32nuCnt1ms++;
+
+    velocity_cal_left();
+    velocity_cal_right();
+
 }
 
 static void AppTask10ms(void)
 {
     stTestCnt.u32nuCnt10ms++;
-    calculate_speed(cur_velo_wheel.v_left,cur_velo_wheel.v_right);
+
 }
 
 
 static void AppTask100ms(void)
 {
     stTestCnt.u32nuCnt100ms++;
+    calculate_speed(Left_velocity, Right_velocity);
 }
 
 static void AppTask1000ms(void)
@@ -59,6 +73,7 @@ static void AppTask1000ms(void)
 
 void AppScheduling(void)
 {
+    AppNoTask();
     if(stSchedulingInfo.u8nuScheduling1msFlag == 1u)
     {
         stSchedulingInfo.u8nuScheduling1msFlag = 0u;
