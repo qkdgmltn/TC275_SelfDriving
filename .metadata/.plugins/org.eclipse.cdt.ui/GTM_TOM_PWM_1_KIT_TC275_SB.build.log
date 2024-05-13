@@ -1,0 +1,7 @@
+19:00:45 **** Incremental Build of configuration Debug for project GTM_TOM_PWM_1_KIT_TC275_SB ****
+make --output-sync -j12 all 
+Libraries/iLLD/TC27D/Tricore/_PinMap/IfxAsclin_PinMap.d:5: *** target pattern contains no '%'.  Stop.
+"make --output-sync -j12 all" terminated with exit code 2. Build might be incomplete.
+
+19:00:46 Build Failed. 1 errors, 0 warnings. (took 134ms)
+

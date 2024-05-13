@@ -1,0 +1,2 @@
+Sensor_input/ASCLIN.o :	../Sensor_input/ASCLIN.c
+../Sensor_input/ASCLIN.c :

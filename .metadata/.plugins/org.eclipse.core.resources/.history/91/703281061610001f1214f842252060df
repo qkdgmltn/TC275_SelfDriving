@@ -1,0 +1,16 @@
+#ifndef TOF_H_
+#define TOF_H_
+
+static int verifyCheckSum(unsigned char data[]);
+static int checkTofStrength(unsigned char data[]);
+
+extern void Init_ToF(void);
+void _init_uart1(void);                 /* Initialization function   */
+unsigned char _in_uart1(void);          /* Receive (and wait for) a character from the serial line */
+int _poll_uart1(unsigned char *chr);
+void _out_uart1(const unsigned char chr);
+
+extern int getTofDistance(void);
+
+#endif /* TOF_H_ */
+

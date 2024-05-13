@@ -1,0 +1,4 @@
+Motor_control.o :	../Control_section/Motor_control.c
+../Control_section/Motor_control.c :
+Motor_control.o :	..\Control_section\Motor_control.h
+..\Control_section\Motor_control.h :

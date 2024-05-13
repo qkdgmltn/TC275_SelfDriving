@@ -26,6 +26,7 @@ void _init_uart1(void);                 /* Initialization function   */
 unsigned char _in_uart1(void);          /* Receive (and wait for) a character from the serial line */
 int _poll_uart1(unsigned char *chr);
 void _out_uart1(const unsigned char chr);
+uint32 LPF(int prev_dist, int dist, double Ts, int cf);
 
 extern int getTofDistance(void);
 

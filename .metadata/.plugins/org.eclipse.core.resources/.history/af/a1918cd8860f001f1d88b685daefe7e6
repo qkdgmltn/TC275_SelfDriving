@@ -1,0 +1,4 @@
+Sensor_input/Tof.o :	../Sensor_input/Tof.c
+../Sensor_input/Tof.c :
+Sensor_input/Tof.o :	c:/Users/USER/AURIX-v1.9.20-workspace/TC275_SelfDriving/LKAS_ACC_project/Sensor_input/Tof.h
+c:/Users/USER/AURIX-v1.9.20-workspace/TC275_SelfDriving/LKAS_ACC_project/Sensor_input/Tof.h :
