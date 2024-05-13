@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc16208a --dep-file=Sensor_input/Encoder.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc27xd -D__CPU_TC27XD__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc27xd -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Actuation_output -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Configurations -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Control_section -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Sfr\\\\TC27D -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Sfr\\\\TC27D\\\\_Reg -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Comm -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Asclin\\\\Asc -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Cpu\\\\CStart -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Gtm\\\\Tom -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Port -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Scu -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Src -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Stm -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\_Lib -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\_Lib\\\\DataHandling -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\_PinMap -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Sensor_input -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Situation_decision -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o Sensor_input/Encoder.src ../Sensor_input/Encoder.c"
+	.compiler_invocation	"ctc -f cc13480a --dep-file=Sensor_input/Encoder.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc27xd -D__CPU_TC27XD__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc27xd -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Actuation_output -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Configurations -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Control_section -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Sfr\\\\TC27D -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Sfr\\\\TC27D\\\\_Reg -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Comm -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Asclin\\\\Asc -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Cpu\\\\CStart -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Gtm\\\\Tom -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Port -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Scu -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Src -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Stm -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\_Lib -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\_Lib\\\\DataHandling -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\_PinMap -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Sensor_input -IC:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Situation_decision -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o Sensor_input/Encoder.src ../Sensor_input/Encoder.c"
 	.compiler_name		"ctc"
 	;source	'../Sensor_input/Encoder.c'
 
@@ -18,37 +18,37 @@ Encoder_init:	.type	func
 	movh.a	a4,#61444
 	lea	a4,[a4]@los(0xf003b500)
 	mov	d4,#5
-.L190:
+.L194:
 	mov	d5,#8
-.L133:
+.L137:
 	call	IfxPort_setPinMode
-.L134:
+.L138:
 	movh.a	a4,#61444
 	lea	a4,[a4]@los(0xf003b500)
 	mov	d4,#4
-.L191:
-	mov	d5,#8
-.L142:
-	call	IfxPort_setPinMode
-.L143:
-	movh.a	a4,#61444
-	lea	a4,[a4]@los(0xf003c000)
-	mov	d4,#0
-.L192:
-	mov	d5,#8
-.L144:
-	call	IfxPort_setPinMode
-.L145:
-	movh.a	a4,#61444
-	lea	a4,[a4]@los(0xf003c000)
-	mov	d4,#3
-.L193:
+.L195:
 	mov	d5,#8
 .L146:
 	call	IfxPort_setPinMode
 .L147:
+	movh.a	a4,#61444
+	lea	a4,[a4]@los(0xf003c000)
+	mov	d4,#0
+.L196:
+	mov	d5,#8
+.L148:
+	call	IfxPort_setPinMode
+.L149:
+	movh.a	a4,#61444
+	lea	a4,[a4]@los(0xf003c000)
+	mov	d4,#3
+.L197:
+	mov	d5,#8
+.L150:
+	call	IfxPort_setPinMode
+.L151:
 	ret
-.L131:
+.L135:
 	
 __Encoder_init_function_end:
 	.size	Encoder_init,__Encoder_init_function_end-Encoder_init
@@ -66,14 +66,14 @@ Encoder_cnt_left:	.type	func
 	movh.a	a15,#61444
 	lea	a15,[a15]@los(0xf003c000)
 	mov	d0,#0
-.L150:
+.L154:
 	ld.w	d15,[a15]36
 	extr.u	d15,d15,d0,#1
-.L198:
+.L202:
 	jeq	d15,#0,.L2
-.L199:
+.L203:
 	mov	d15,#1
-.L200:
+.L204:
 	j	.L3
 .L2:
 	mov	d15,#0
@@ -82,20 +82,20 @@ Encoder_cnt_left:	.type	func
 .L4:
 	movh.a	a15,#@his(Left_DataA)
 	lea	a15,[a15]@los(Left_DataA)
-.L157:
+.L161:
 	st.w	[a15],d15
-.L158:
+.L162:
 	movh.a	a15,#61444
 	lea	a15,[a15]@los(0xf003c000)
 	mov	d0,#3
-.L159:
+.L163:
 	ld.w	d15,[a15]36
 	extr.u	d15,d15,d0,#1
-.L201:
+.L205:
 	jeq	d15,#0,.L5
-.L202:
+.L206:
 	mov	d15,#1
-.L203:
+.L207:
 	j	.L6
 .L5:
 	mov	d15,#0
@@ -104,55 +104,55 @@ Encoder_cnt_left:	.type	func
 .L7:
 	movh.a	a15,#@his(Left_DataB)
 	lea	a15,[a15]@los(Left_DataB)
-.L161:
+.L165:
 	st.w	[a15],d15
-.L162:
+.L166:
 	movh.a	a15,#@his(Left_DataAB)
 	lea	a15,[a15]@los(Left_DataAB)
-.L204:
+.L208:
 	movh.a	a2,#@his(Left_DataA)
 	lea	a2,[a2]@los(Left_DataA)
 	ld.w	d0,[a2]
-.L205:
+.L209:
 	sh	d0,#1
-.L163:
+.L167:
 	or	d0,d15
-.L164:
+.L168:
 	st.w	[a15],d0
-.L206:
+.L210:
 	movh.a	a15,#@his(Left_DataAB)
 	lea	a15,[a15]@los(Left_DataAB)
 	ld.w	d15,[a15]
-.L207:
+.L211:
 	jne	d15,#0,.L8
-.L208:
+.L212:
 	movh.a	a15,#@his(Left_DataAB_prev)
 	lea	a15,[a15]@los(Left_DataAB_prev)
 	ld.w	d15,[a15]
-.L209:
+.L213:
 	jne	d15,#1,.L9
-.L210:
+.L214:
 	movh.a	a15,#@his(Left_CntAB)
 	lea	a15,[a15]@los(Left_CntAB)
 	movh.a	a2,#@his(Left_CntAB)
 	lea	a2,[a2]@los(Left_CntAB)
 	ld.w	d15,[a2]
-.L211:
+.L215:
 	add	d15,#1
 	st.w	[a15],d15
 .L9:
 	movh.a	a15,#@his(Left_DataAB_prev)
 	lea	a15,[a15]@los(Left_DataAB_prev)
 	ld.w	d15,[a15]
-.L212:
+.L216:
 	jne	d15,#2,.L10
-.L213:
+.L217:
 	movh.a	a15,#@his(Left_CntAB)
 	lea	a15,[a15]@los(Left_CntAB)
 	movh.a	a2,#@his(Left_CntAB)
 	lea	a2,[a2]@los(Left_CntAB)
 	ld.w	d15,[a2]
-.L214:
+.L218:
 	add	d15,#-1
 	st.w	[a15],d15
 .L10:
@@ -161,36 +161,36 @@ Encoder_cnt_left:	.type	func
 	movh.a	a15,#@his(Left_DataAB)
 	lea	a15,[a15]@los(Left_DataAB)
 	ld.w	d15,[a15]
-.L215:
+.L219:
 	jne	d15,#1,.L12
-.L216:
+.L220:
 	movh.a	a15,#@his(Left_DataAB_prev)
 	lea	a15,[a15]@los(Left_DataAB_prev)
 	ld.w	d15,[a15]
-.L217:
+.L221:
 	jne	d15,#3,.L13
-.L218:
+.L222:
 	movh.a	a15,#@his(Left_CntAB)
 	lea	a15,[a15]@los(Left_CntAB)
 	movh.a	a2,#@his(Left_CntAB)
 	lea	a2,[a2]@los(Left_CntAB)
 	ld.w	d15,[a2]
-.L219:
+.L223:
 	add	d15,#1
 	st.w	[a15],d15
 .L13:
 	movh.a	a15,#@his(Left_DataAB_prev)
 	lea	a15,[a15]@los(Left_DataAB_prev)
 	ld.w	d15,[a15]
-.L220:
+.L224:
 	jne	d15,#0,.L14
-.L221:
+.L225:
 	movh.a	a15,#@his(Left_CntAB)
 	lea	a15,[a15]@los(Left_CntAB)
 	movh.a	a2,#@his(Left_CntAB)
 	lea	a2,[a2]@los(Left_CntAB)
 	ld.w	d15,[a2]
-.L222:
+.L226:
 	add	d15,#-1
 	st.w	[a15],d15
 .L14:
@@ -199,36 +199,36 @@ Encoder_cnt_left:	.type	func
 	movh.a	a15,#@his(Left_DataAB)
 	lea	a15,[a15]@los(Left_DataAB)
 	ld.w	d15,[a15]
-.L223:
+.L227:
 	jne	d15,#2,.L16
-.L224:
+.L228:
 	movh.a	a15,#@his(Left_DataAB_prev)
 	lea	a15,[a15]@los(Left_DataAB_prev)
 	ld.w	d15,[a15]
-.L225:
+.L229:
 	jne	d15,#0,.L17
-.L226:
+.L230:
 	movh.a	a15,#@his(Left_CntAB)
 	lea	a15,[a15]@los(Left_CntAB)
 	movh.a	a2,#@his(Left_CntAB)
 	lea	a2,[a2]@los(Left_CntAB)
 	ld.w	d15,[a2]
-.L227:
+.L231:
 	add	d15,#1
 	st.w	[a15],d15
 .L17:
 	movh.a	a15,#@his(Left_DataAB_prev)
 	lea	a15,[a15]@los(Left_DataAB_prev)
 	ld.w	d15,[a15]
-.L228:
+.L232:
 	jne	d15,#3,.L18
-.L229:
+.L233:
 	movh.a	a15,#@his(Left_CntAB)
 	lea	a15,[a15]@los(Left_CntAB)
 	movh.a	a2,#@his(Left_CntAB)
 	lea	a2,[a2]@los(Left_CntAB)
 	ld.w	d15,[a2]
-.L230:
+.L234:
 	add	d15,#-1
 	st.w	[a15],d15
 .L18:
@@ -237,36 +237,36 @@ Encoder_cnt_left:	.type	func
 	movh.a	a15,#@his(Left_DataAB)
 	lea	a15,[a15]@los(Left_DataAB)
 	ld.w	d15,[a15]
-.L231:
+.L235:
 	jne	d15,#3,.L20
-.L232:
+.L236:
 	movh.a	a15,#@his(Left_DataAB_prev)
 	lea	a15,[a15]@los(Left_DataAB_prev)
 	ld.w	d15,[a15]
-.L233:
+.L237:
 	jne	d15,#2,.L21
-.L234:
+.L238:
 	movh.a	a15,#@his(Left_CntAB)
 	lea	a15,[a15]@los(Left_CntAB)
 	movh.a	a2,#@his(Left_CntAB)
 	lea	a2,[a2]@los(Left_CntAB)
 	ld.w	d15,[a2]
-.L235:
+.L239:
 	add	d15,#1
 	st.w	[a15],d15
 .L21:
 	movh.a	a15,#@his(Left_DataAB_prev)
 	lea	a15,[a15]@los(Left_DataAB_prev)
 	ld.w	d15,[a15]
-.L236:
+.L240:
 	jne	d15,#1,.L22
-.L237:
+.L241:
 	movh.a	a15,#@his(Left_CntAB)
 	lea	a15,[a15]@los(Left_CntAB)
 	movh.a	a2,#@his(Left_CntAB)
 	lea	a2,[a2]@los(Left_CntAB)
 	ld.w	d15,[a2]
-.L238:
+.L242:
 	add	d15,#-1
 	st.w	[a15],d15
 .L22:
@@ -276,62 +276,62 @@ Encoder_cnt_left:	.type	func
 .L11:
 	movh.a	a15,#@his(Left_DataAB_prev)
 	lea	a15,[a15]@los(Left_DataAB_prev)
-.L239:
+.L243:
 	movh.a	a2,#@his(Left_DataAB)
 	lea	a2,[a2]@los(Left_DataAB)
 	ld.w	d15,[a2]
-.L240:
+.L244:
 	st.w	[a15],d15
-.L241:
+.L245:
 	movh.a	a15,#@his(Left_Pos_rad)
 	lea	a15,[a15]@los(Left_Pos_rad)
-.L242:
+.L246:
 	movh.a	a2,#@his(Left_CntAB)
 	lea	a2,[a2]@los(Left_CntAB)
 	ld.w	d15,[a2]
-.L243:
+.L247:
 	mul	d15,d15,#2
 	utof	d15,d15
-.L244:
+.L248:
 	mov	d0,#4056
 	addih	d0,d0,#16457
-.L245:
-	mul.f	d15,d15,d0
-.L246:
-	movh	d0,#16960
-.L247:
-	div.f	d15,d15,d0
-.L248:
-	st.w	[a15],d15
 .L249:
+	mul.f	d15,d15,d0
+.L250:
+	movh	d0,#16960
+.L251:
+	div.f	d15,d15,d0
+.L252:
+	st.w	[a15],d15
+.L253:
 	movh.a	a15,#@his(Left_Pos_deg)
 	lea	a15,[a15]@los(Left_Pos_deg)
-.L250:
+.L254:
 	movh.a	a2,#@his(Left_CntAB)
 	lea	a2,[a2]@los(Left_CntAB)
 	ld.w	d0,[a2]
-.L251:
-	mov	d15,#360
-.L252:
-	mul	d0,d15
-.L253:
-	mov	d15,#48
-.L254:
-	div.u	e0,d0,d15
 .L255:
-	st.w	[a15],d0
+	mov	d15,#360
 .L256:
+	mul	d0,d15
+.L257:
+	mov	d15,#48
+.L258:
+	div.u	e0,d0,d15
+.L259:
+	st.w	[a15],d0
+.L260:
 	movh.a	a15,#@his(Left_theta)
 	lea	a15,[a15]@los(Left_theta)
-.L257:
+.L261:
 	movh.a	a2,#@his(Left_Pos_rad)
 	lea	a2,[a2]@los(Left_Pos_rad)
 	ld.w	d15,[a2]
-.L258:
+.L262:
 	st.w	[a15],d15
-.L259:
+.L263:
 	ret
-.L148:
+.L152:
 	
 __Encoder_cnt_left_function_end:
 	.size	Encoder_cnt_left,__Encoder_cnt_left_function_end-Encoder_cnt_left
@@ -349,14 +349,14 @@ Encoder_cnt_right:	.type	func
 	movh.a	a15,#61444
 	lea	a15,[a15]@los(0xf003b500)
 	mov	d0,#5
-.L166:
+.L170:
 	ld.w	d15,[a15]36
 	extr.u	d15,d15,d0,#1
-.L264:
+.L268:
 	jeq	d15,#0,.L23
-.L265:
+.L269:
 	mov	d15,#1
-.L266:
+.L270:
 	j	.L24
 .L23:
 	mov	d15,#0
@@ -365,20 +365,20 @@ Encoder_cnt_right:	.type	func
 .L25:
 	movh.a	a15,#@his(Right_DataA)
 	lea	a15,[a15]@los(Right_DataA)
-.L170:
+.L174:
 	st.w	[a15],d15
-.L171:
+.L175:
 	movh.a	a15,#61444
 	lea	a15,[a15]@los(0xf003b500)
 	mov	d0,#4
-.L172:
+.L176:
 	ld.w	d15,[a15]36
 	extr.u	d15,d15,d0,#1
-.L267:
+.L271:
 	jeq	d15,#0,.L26
-.L268:
+.L272:
 	mov	d15,#1
-.L269:
+.L273:
 	j	.L27
 .L26:
 	mov	d15,#0
@@ -387,55 +387,55 @@ Encoder_cnt_right:	.type	func
 .L28:
 	movh.a	a15,#@his(Right_DataB)
 	lea	a15,[a15]@los(Right_DataB)
-.L174:
+.L178:
 	st.w	[a15],d15
-.L175:
+.L179:
 	movh.a	a15,#@his(Right_DataAB)
 	lea	a15,[a15]@los(Right_DataAB)
-.L270:
+.L274:
 	movh.a	a2,#@his(Right_DataA)
 	lea	a2,[a2]@los(Right_DataA)
 	ld.w	d0,[a2]
-.L271:
+.L275:
 	sh	d0,#1
-.L176:
+.L180:
 	or	d0,d15
-.L177:
+.L181:
 	st.w	[a15],d0
-.L272:
+.L276:
 	movh.a	a15,#@his(Right_DataAB)
 	lea	a15,[a15]@los(Right_DataAB)
 	ld.w	d15,[a15]
-.L273:
+.L277:
 	jne	d15,#0,.L29
-.L274:
+.L278:
 	movh.a	a15,#@his(Right_DataAB_prev)
 	lea	a15,[a15]@los(Right_DataAB_prev)
 	ld.w	d15,[a15]
-.L275:
+.L279:
 	jne	d15,#1,.L30
-.L276:
+.L280:
 	movh.a	a15,#@his(Right_CntAB)
 	lea	a15,[a15]@los(Right_CntAB)
 	movh.a	a2,#@his(Right_CntAB)
 	lea	a2,[a2]@los(Right_CntAB)
 	ld.w	d15,[a2]
-.L277:
+.L281:
 	add	d15,#1
 	st.w	[a15],d15
 .L30:
 	movh.a	a15,#@his(Right_DataAB_prev)
 	lea	a15,[a15]@los(Right_DataAB_prev)
 	ld.w	d15,[a15]
-.L278:
+.L282:
 	jne	d15,#2,.L31
-.L279:
+.L283:
 	movh.a	a15,#@his(Right_CntAB)
 	lea	a15,[a15]@los(Right_CntAB)
 	movh.a	a2,#@his(Right_CntAB)
 	lea	a2,[a2]@los(Right_CntAB)
 	ld.w	d15,[a2]
-.L280:
+.L284:
 	add	d15,#-1
 	st.w	[a15],d15
 .L31:
@@ -444,36 +444,36 @@ Encoder_cnt_right:	.type	func
 	movh.a	a15,#@his(Right_DataAB)
 	lea	a15,[a15]@los(Right_DataAB)
 	ld.w	d15,[a15]
-.L281:
+.L285:
 	jne	d15,#1,.L33
-.L282:
+.L286:
 	movh.a	a15,#@his(Right_DataAB_prev)
 	lea	a15,[a15]@los(Right_DataAB_prev)
 	ld.w	d15,[a15]
-.L283:
+.L287:
 	jne	d15,#3,.L34
-.L284:
+.L288:
 	movh.a	a15,#@his(Right_CntAB)
 	lea	a15,[a15]@los(Right_CntAB)
 	movh.a	a2,#@his(Right_CntAB)
 	lea	a2,[a2]@los(Right_CntAB)
 	ld.w	d15,[a2]
-.L285:
+.L289:
 	add	d15,#1
 	st.w	[a15],d15
 .L34:
 	movh.a	a15,#@his(Right_DataAB_prev)
 	lea	a15,[a15]@los(Right_DataAB_prev)
 	ld.w	d15,[a15]
-.L286:
+.L290:
 	jne	d15,#0,.L35
-.L287:
+.L291:
 	movh.a	a15,#@his(Right_CntAB)
 	lea	a15,[a15]@los(Right_CntAB)
 	movh.a	a2,#@his(Right_CntAB)
 	lea	a2,[a2]@los(Right_CntAB)
 	ld.w	d15,[a2]
-.L288:
+.L292:
 	add	d15,#-1
 	st.w	[a15],d15
 .L35:
@@ -482,36 +482,36 @@ Encoder_cnt_right:	.type	func
 	movh.a	a15,#@his(Right_DataAB)
 	lea	a15,[a15]@los(Right_DataAB)
 	ld.w	d15,[a15]
-.L289:
+.L293:
 	jne	d15,#2,.L37
-.L290:
+.L294:
 	movh.a	a15,#@his(Right_DataAB_prev)
 	lea	a15,[a15]@los(Right_DataAB_prev)
 	ld.w	d15,[a15]
-.L291:
+.L295:
 	jne	d15,#0,.L38
-.L292:
+.L296:
 	movh.a	a15,#@his(Right_CntAB)
 	lea	a15,[a15]@los(Right_CntAB)
 	movh.a	a2,#@his(Right_CntAB)
 	lea	a2,[a2]@los(Right_CntAB)
 	ld.w	d15,[a2]
-.L293:
+.L297:
 	add	d15,#1
 	st.w	[a15],d15
 .L38:
 	movh.a	a15,#@his(Right_DataAB_prev)
 	lea	a15,[a15]@los(Right_DataAB_prev)
 	ld.w	d15,[a15]
-.L294:
+.L298:
 	jne	d15,#3,.L39
-.L295:
+.L299:
 	movh.a	a15,#@his(Right_CntAB)
 	lea	a15,[a15]@los(Right_CntAB)
 	movh.a	a2,#@his(Right_CntAB)
 	lea	a2,[a2]@los(Right_CntAB)
 	ld.w	d15,[a2]
-.L296:
+.L300:
 	add	d15,#-1
 	st.w	[a15],d15
 .L39:
@@ -520,36 +520,36 @@ Encoder_cnt_right:	.type	func
 	movh.a	a15,#@his(Right_DataAB)
 	lea	a15,[a15]@los(Right_DataAB)
 	ld.w	d15,[a15]
-.L297:
+.L301:
 	jne	d15,#3,.L41
-.L298:
+.L302:
 	movh.a	a15,#@his(Right_DataAB_prev)
 	lea	a15,[a15]@los(Right_DataAB_prev)
 	ld.w	d15,[a15]
-.L299:
+.L303:
 	jne	d15,#2,.L42
-.L300:
+.L304:
 	movh.a	a15,#@his(Right_CntAB)
 	lea	a15,[a15]@los(Right_CntAB)
 	movh.a	a2,#@his(Right_CntAB)
 	lea	a2,[a2]@los(Right_CntAB)
 	ld.w	d15,[a2]
-.L301:
+.L305:
 	add	d15,#1
 	st.w	[a15],d15
 .L42:
 	movh.a	a15,#@his(Right_DataAB_prev)
 	lea	a15,[a15]@los(Right_DataAB_prev)
 	ld.w	d15,[a15]
-.L302:
+.L306:
 	jne	d15,#1,.L43
-.L303:
+.L307:
 	movh.a	a15,#@his(Right_CntAB)
 	lea	a15,[a15]@los(Right_CntAB)
 	movh.a	a2,#@his(Right_CntAB)
 	lea	a2,[a2]@los(Right_CntAB)
 	ld.w	d15,[a2]
-.L304:
+.L308:
 	add	d15,#-1
 	st.w	[a15],d15
 .L43:
@@ -559,62 +559,62 @@ Encoder_cnt_right:	.type	func
 .L32:
 	movh.a	a15,#@his(Right_DataAB_prev)
 	lea	a15,[a15]@los(Right_DataAB_prev)
-.L305:
+.L309:
 	movh.a	a2,#@his(Right_DataAB)
 	lea	a2,[a2]@los(Right_DataAB)
 	ld.w	d15,[a2]
-.L306:
+.L310:
 	st.w	[a15],d15
-.L307:
+.L311:
 	movh.a	a15,#@his(Right_Pos_rad)
 	lea	a15,[a15]@los(Right_Pos_rad)
-.L308:
+.L312:
 	movh.a	a2,#@his(Right_CntAB)
 	lea	a2,[a2]@los(Right_CntAB)
 	ld.w	d15,[a2]
-.L309:
+.L313:
 	mul	d15,d15,#2
 	utof	d15,d15
-.L310:
+.L314:
 	mov	d0,#4056
 	addih	d0,d0,#16457
-.L311:
-	mul.f	d15,d15,d0
-.L312:
-	movh	d0,#16960
-.L313:
-	div.f	d15,d15,d0
-.L314:
-	st.w	[a15],d15
 .L315:
+	mul.f	d15,d15,d0
+.L316:
+	movh	d0,#16960
+.L317:
+	div.f	d15,d15,d0
+.L318:
+	st.w	[a15],d15
+.L319:
 	movh.a	a15,#@his(Right_Pos_deg)
 	lea	a15,[a15]@los(Right_Pos_deg)
-.L316:
+.L320:
 	movh.a	a2,#@his(Right_CntAB)
 	lea	a2,[a2]@los(Right_CntAB)
 	ld.w	d0,[a2]
-.L317:
-	mov	d15,#360
-.L318:
-	mul	d0,d15
-.L319:
-	mov	d15,#48
-.L320:
-	div.u	e0,d0,d15
 .L321:
-	st.w	[a15],d0
+	mov	d15,#360
 .L322:
+	mul	d0,d15
+.L323:
+	mov	d15,#48
+.L324:
+	div.u	e0,d0,d15
+.L325:
+	st.w	[a15],d0
+.L326:
 	movh.a	a15,#@his(Right_theta)
 	lea	a15,[a15]@los(Right_theta)
-.L323:
+.L327:
 	movh.a	a2,#@his(Right_Pos_rad)
 	lea	a2,[a2]@los(Right_Pos_rad)
 	ld.w	d15,[a2]
-.L324:
+.L328:
 	st.w	[a15],d15
-.L325:
+.L329:
 	ret
-.L165:
+.L169:
 	
 __Encoder_cnt_right_function_end:
 	.size	Encoder_cnt_right,__Encoder_cnt_right_function_end-Encoder_cnt_right
@@ -631,86 +631,104 @@ __Encoder_cnt_right_function_end:
 velocity_cal_left:	.type	func
 	movh.a	a15,#@his(Left_velocity)
 	lea	a15,[a15]@los(Left_velocity)
-.L330:
+.L334:
 	movh.a	a2,#@his(Left_Pos_rad)
 	lea	a2,[a2]@los(Left_Pos_rad)
 	ld.w	d15,[a2]
-.L331:
+.L335:
 	movh.a	a2,#@his(Left_Pos_rad_prev)
 	lea	a2,[a2]@los(Left_Pos_rad_prev)
 	ld.w	d0,[a2]
-.L332:
+.L336:
 	sub.f	d15,d15,d0
-.L333:
+.L337:
 	mov	d0,#4719
 	addih	d0,d0,#14979
-.L334:
+.L338:
 	div.f	d15,d15,d0
-.L335:
+.L339:
 	st.w	[a15],d15
-.L336:
+.L340:
 	movh.a	a15,#@his(Left_velocity)
 	lea	a15,[a15]@los(Left_velocity)
-.L337:
+.L341:
 	movh.a	a2,#@his(Left_velocity_prev)
 	lea	a2,[a2]@los(Left_velocity_prev)
 	ld.w	d4,[a2]
-.L338:
+.L342:
 	movh.a	a2,#@his(Left_velocity)
 	lea	a2,[a2]@los(Left_velocity)
 	ld.w	d5,[a2]
-.L339:
+.L343:
 	mov	d6,#4719
 	addih	d6,d6,#14979
-.L340:
+.L344:
 	mov	d7,#200
 	call	LPF
-.L341:
+.L345:
 	itof	d15,d2
-.L342:
+.L346:
 	st.w	[a15],d15
-.L343:
+.L347:
 	movh.a	a15,#@his(Left_velocity_prev)
 	lea	a15,[a15]@los(Left_velocity_prev)
-.L344:
+.L348:
 	movh.a	a2,#@his(Left_velocity)
 	lea	a2,[a2]@los(Left_velocity)
 	ld.w	d15,[a2]
-.L345:
+.L349:
 	st.w	[a15],d15
-.L346:
+.L350:
 	movh.a	a15,#@his(Left_velocity_rpm)
 	lea	a15,[a15]@los(Left_velocity_rpm)
-.L347:
+.L351:
 	movh.a	a2,#@his(Left_velocity)
 	lea	a2,[a2]@los(Left_velocity)
 	ld.w	d15,[a2]
-.L348:
+.L352:
 	movh	d0,#17008
-.L349:
+.L353:
 	mul.f	d15,d15,d0
-.L350:
+.L354:
 	mov	d0,#4056
 	addih	d0,d0,#16585
-.L351:
+.L355:
 	div.f	d15,d15,d0
-.L352:
+.L356:
 	ftouz	d15,d15
 	utof	d15,d15
-.L353:
+.L357:
 	st.w	[a15],d15
-.L354:
+.L358:
 	movh.a	a15,#@his(Left_Pos_rad_prev)
 	lea	a15,[a15]@los(Left_Pos_rad_prev)
-.L355:
+.L359:
 	movh.a	a2,#@his(Left_Pos_rad)
 	lea	a2,[a2]@los(Left_Pos_rad)
 	ld.w	d15,[a2]
-.L356:
+.L360:
 	st.w	[a15],d15
-.L357:
+.L361:
+	movh.a	a15,#@his(Left_velocity_mps)
+	lea	a15,[a15]@los(Left_velocity_mps)
+.L362:
+	movh.a	a2,#@his(Left_velocity)
+	lea	a2,[a2]@los(Left_velocity)
+	ld.w	d15,[a2]
+.L363:
+	mov	d0,#14680
+	addih	d0,d0,#15668
+.L364:
+	mul.f	d15,d15,d0
+.L365:
+	movh	d0,#16384
+.L366:
+	div.f	d15,d15,d0
+.L367:
+	st.w	[a15],d15
+.L368:
 	ret
-.L178:
+.L182:
 	
 __velocity_cal_left_function_end:
 	.size	velocity_cal_left,__velocity_cal_left_function_end-velocity_cal_left
@@ -727,86 +745,104 @@ __velocity_cal_left_function_end:
 velocity_cal_right:	.type	func
 	movh.a	a15,#@his(Right_velocity)
 	lea	a15,[a15]@los(Right_velocity)
-.L362:
+.L373:
 	movh.a	a2,#@his(Right_Pos_rad)
 	lea	a2,[a2]@los(Right_Pos_rad)
 	ld.w	d15,[a2]
-.L363:
+.L374:
 	movh.a	a2,#@his(Right_Pos_rad_prev)
 	lea	a2,[a2]@los(Right_Pos_rad_prev)
 	ld.w	d0,[a2]
-.L364:
+.L375:
 	sub.f	d15,d15,d0
-.L365:
+.L376:
 	mov	d0,#4719
 	addih	d0,d0,#14979
-.L366:
+.L377:
 	div.f	d15,d15,d0
-.L367:
+.L378:
 	st.w	[a15],d15
-.L368:
+.L379:
 	movh.a	a15,#@his(Right_velocity)
 	lea	a15,[a15]@los(Right_velocity)
-.L369:
+.L380:
 	movh.a	a2,#@his(Right_velocity_prev)
 	lea	a2,[a2]@los(Right_velocity_prev)
 	ld.w	d4,[a2]
-.L370:
+.L381:
 	movh.a	a2,#@his(Right_velocity)
 	lea	a2,[a2]@los(Right_velocity)
 	ld.w	d5,[a2]
-.L371:
+.L382:
 	mov	d6,#4719
 	addih	d6,d6,#14979
-.L372:
+.L383:
 	mov	d7,#200
 	call	LPF
-.L373:
-	itof	d15,d2
-.L374:
-	st.w	[a15],d15
-.L375:
-	movh.a	a15,#@his(Right_velocity_prev)
-	lea	a15,[a15]@los(Right_velocity_prev)
-.L376:
-	movh.a	a2,#@his(Right_velocity)
-	lea	a2,[a2]@los(Right_velocity)
-	ld.w	d15,[a2]
-.L377:
-	st.w	[a15],d15
-.L378:
-	movh.a	a15,#@his(Right_velocity_rpm)
-	lea	a15,[a15]@los(Right_velocity_rpm)
-.L379:
-	movh.a	a2,#@his(Right_velocity)
-	lea	a2,[a2]@los(Right_velocity)
-	ld.w	d15,[a2]
-.L380:
-	movh	d0,#17008
-.L381:
-	mul.f	d15,d15,d0
-.L382:
-	mov	d0,#4056
-	addih	d0,d0,#16585
-.L383:
-	div.f	d15,d15,d0
 .L384:
-	ftouz	d15,d15
-	utof	d15,d15
+	itof	d15,d2
 .L385:
 	st.w	[a15],d15
 .L386:
-	movh.a	a15,#@his(Right_Pos_rad_prev)
-	lea	a15,[a15]@los(Right_Pos_rad_prev)
+	movh.a	a15,#@his(Right_velocity_prev)
+	lea	a15,[a15]@los(Right_velocity_prev)
 .L387:
-	movh.a	a2,#@his(Right_Pos_rad)
-	lea	a2,[a2]@los(Right_Pos_rad)
+	movh.a	a2,#@his(Right_velocity)
+	lea	a2,[a2]@los(Right_velocity)
 	ld.w	d15,[a2]
 .L388:
 	st.w	[a15],d15
 .L389:
+	movh.a	a15,#@his(Right_velocity_rpm)
+	lea	a15,[a15]@los(Right_velocity_rpm)
+.L390:
+	movh.a	a2,#@his(Right_velocity)
+	lea	a2,[a2]@los(Right_velocity)
+	ld.w	d15,[a2]
+.L391:
+	movh	d0,#17008
+.L392:
+	mul.f	d15,d15,d0
+.L393:
+	mov	d0,#4056
+	addih	d0,d0,#16585
+.L394:
+	div.f	d15,d15,d0
+.L395:
+	ftouz	d15,d15
+	utof	d15,d15
+.L396:
+	st.w	[a15],d15
+.L397:
+	movh.a	a15,#@his(Right_Pos_rad_prev)
+	lea	a15,[a15]@los(Right_Pos_rad_prev)
+.L398:
+	movh.a	a2,#@his(Right_Pos_rad)
+	lea	a2,[a2]@los(Right_Pos_rad)
+	ld.w	d15,[a2]
+.L399:
+	st.w	[a15],d15
+.L400:
+	movh.a	a15,#@his(Right_velocity_mps)
+	lea	a15,[a15]@los(Right_velocity_mps)
+.L401:
+	movh.a	a2,#@his(Right_velocity)
+	lea	a2,[a2]@los(Right_velocity)
+	ld.w	d15,[a2]
+.L402:
+	mov	d0,#14680
+	addih	d0,d0,#15668
+.L403:
+	mul.f	d15,d15,d0
+.L404:
+	movh	d0,#16384
+.L405:
+	div.f	d15,d15,d0
+.L406:
+	st.w	[a15],d15
+.L407:
 	ret
-.L179:
+.L183:
 	
 __velocity_cal_right_function_end:
 	.size	velocity_cal_right,__velocity_cal_right_function_end-velocity_cal_right
@@ -939,6 +975,20 @@ Left_velocity:	.type	object
 Right_velocity:	.type	object
 	.size	Right_velocity,4
 	.space	4
+	.sdecl	'.bss.Encoder.Left_velocity_mps',data,cluster('Left_velocity_mps')
+	.sect	'.bss.Encoder.Left_velocity_mps'
+	.global	Left_velocity_mps
+	.align	2
+Left_velocity_mps:	.type	object
+	.size	Left_velocity_mps,4
+	.space	4
+	.sdecl	'.bss.Encoder.Right_velocity_mps',data,cluster('Right_velocity_mps')
+	.sect	'.bss.Encoder.Right_velocity_mps'
+	.global	Right_velocity_mps
+	.align	2
+Right_velocity_mps:	.type	object
+	.size	Right_velocity_mps,4
+	.space	4
 	.sdecl	'.bss.Encoder.Left_Pos_rad_prev',data,cluster('Left_Pos_rad_prev')
 	.sect	'.bss.Encoder.Left_Pos_rad_prev'
 	.global	Left_Pos_rad_prev
@@ -1013,7 +1063,7 @@ Right_velocity_rpm:	.type	object
 	.word	222
 	.byte	6,0,7
 	.byte	'__fract',0,4,128,1
-.L180:
+.L184:
 	.byte	7
 	.byte	'float',0,4,4,8
 	.byte	'Ifx__float_to_fract',0,3,1,149,2,18
@@ -2385,41 +2435,41 @@ Right_velocity_rpm:	.type	object
 	.word	7644
 	.byte	3
 	.word	8247
-.L149:
+.L153:
 	.byte	8
 	.byte	'IfxPort_getPinState',0,3,3,170,4,20
 	.word	451
 	.byte	1,1
-.L151:
+.L155:
 	.byte	5
 	.byte	'port',0,3,170,4,47
 	.word	8252
-.L153:
+.L157:
 	.byte	5
 	.byte	'pinIndex',0,3,170,4,59
 	.word	451
-.L155:
+.L159:
 	.byte	6,0,17,3,80,9,1,18
 	.byte	'IfxPort_InputMode_undefined',0,127,18
 	.byte	'IfxPort_InputMode_noPullDevice',0,0,18
 	.byte	'IfxPort_InputMode_pullDown',0,8,18
 	.byte	'IfxPort_InputMode_pullUp',0,16,0
-.L132:
+.L136:
 	.byte	4
 	.byte	'IfxPort_setPinModeInput',0,3,3,194,4,17,1,1
-.L135:
+.L139:
 	.byte	5
 	.byte	'port',0,3,194,4,48
 	.word	8252
-.L137:
+.L141:
 	.byte	5
 	.byte	'pinIndex',0,3,194,4,60
 	.word	451
-.L139:
+.L143:
 	.byte	5
 	.byte	'mode',0,3,194,4,88
 	.word	8323
-.L141:
+.L145:
 	.byte	6,0,17,3,170,1,9,4,18
 	.byte	'IfxPort_State_notChanged',0,0,18
 	.byte	'IfxPort_State_high',0,1,18
@@ -2513,7 +2563,7 @@ Right_velocity_rpm:	.type	object
 	.byte	'mode',0,3,245,2,78
 	.word	8856
 	.byte	0,24
-	.byte	'LPF',0,5,179,1,21
+	.byte	'LPF',0,5,183,1,21
 	.word	484
 	.byte	1,1,1,7
 	.byte	'short int',0,2,5,25
@@ -2539,7 +2589,7 @@ Right_velocity_rpm:	.type	object
 	.byte	25
 	.byte	'uint16',0,6,112,29
 	.word	491
-.L181:
+.L185:
 	.byte	7
 	.byte	'unsigned long int',0,4,7,25
 	.byte	'uint32',0,6,116,29
@@ -6369,11 +6419,11 @@ Right_velocity_rpm:	.type	object
 	.sdecl	'.debug_line',debug
 	.sect	'.debug_line'
 .L57:
-	.word	.L183-.L182
-.L182:
+	.word	.L187-.L186
+.L186:
 	.half	3
-	.word	.L185-.L184
-.L184:
+	.word	.L189-.L188
+.L188:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Port\\\\Std',0
 	.byte	'C:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\Infra\\\\Sfr\\\\TC27D\\\\_Reg',0
@@ -6392,8 +6442,8 @@ Right_velocity_rpm:	.type	object
 	.byte	'C:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\_Impl\\IfxScu_cfg.h',0
 	.byte	0,0,0
 	.byte	'IfxScu_regdef.h',0,2,0,0,0
-.L185:
-.L183:
+.L189:
+.L187:
 	.sdecl	'.debug_info',debug,cluster('Encoder_init')
 	.sect	'.debug_info'
 .L58:
@@ -6409,50 +6459,50 @@ Right_velocity_rpm:	.type	object
 	.byte	2
 	.word	.L54
 	.byte	3
-	.byte	'Encoder_init',0,1,70,6,1,1,1
-	.word	.L45,.L131,.L44
+	.byte	'Encoder_init',0,1,72,6,1,1,1
+	.word	.L45,.L135,.L44
 	.byte	4
-	.word	.L45,.L131
+	.word	.L45,.L135
 	.byte	5
-	.word	.L132,.L133,.L134
-	.byte	6
-	.word	.L135,.L136
-	.byte	6
-	.word	.L137,.L138
+	.word	.L136,.L137,.L138
 	.byte	6
 	.word	.L139,.L140
+	.byte	6
+	.word	.L141,.L142
+	.byte	6
+	.word	.L143,.L144
 	.byte	7
-	.word	.L141,.L133,.L134
+	.word	.L145,.L137,.L138
 	.byte	0,5
-	.word	.L132,.L142,.L143
-	.byte	6
-	.word	.L135,.L136
-	.byte	6
-	.word	.L137,.L138
+	.word	.L136,.L146,.L147
 	.byte	6
 	.word	.L139,.L140
+	.byte	6
+	.word	.L141,.L142
+	.byte	6
+	.word	.L143,.L144
 	.byte	7
-	.word	.L141,.L142,.L143
+	.word	.L145,.L146,.L147
 	.byte	0,5
-	.word	.L132,.L144,.L145
-	.byte	6
-	.word	.L135,.L136
-	.byte	6
-	.word	.L137,.L138
+	.word	.L136,.L148,.L149
 	.byte	6
 	.word	.L139,.L140
+	.byte	6
+	.word	.L141,.L142
+	.byte	6
+	.word	.L143,.L144
 	.byte	7
-	.word	.L141,.L144,.L145
+	.word	.L145,.L148,.L149
 	.byte	0,5
-	.word	.L132,.L146,.L147
-	.byte	6
-	.word	.L135,.L136
-	.byte	6
-	.word	.L137,.L138
+	.word	.L136,.L150,.L151
 	.byte	6
 	.word	.L139,.L140
+	.byte	6
+	.word	.L141,.L142
+	.byte	6
+	.word	.L143,.L144
 	.byte	7
-	.word	.L141,.L146,.L147
+	.word	.L145,.L150,.L151
 	.byte	0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Encoder_init')
 	.sect	'.debug_abbrev'
@@ -6463,47 +6513,47 @@ Right_velocity_rpm:	.type	object
 	.sdecl	'.debug_line',debug,cluster('Encoder_init')
 	.sect	'.debug_line'
 .L60:
-	.word	.L187-.L186
-.L186:
+	.word	.L191-.L190
+.L190:
 	.half	3
-	.word	.L189-.L188
-.L188:
+	.word	.L193-.L192
+.L192:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Port\\\\Std',0
 	.byte	0
 	.byte	'../Sensor_input/Encoder.c',0,0,0,0
 	.byte	'IfxPort.h',0,1,0,0,0
-.L189:
+.L193:
 	.byte	5,29,7,0,5,2
 	.word	.L45
-	.byte	3,199,0,1,5,46,9
-	.half	.L190-.L45
+	.byte	3,201,0,1,5,46,9
+	.half	.L194-.L45
 	.byte	1,4,2,5,40,9
-	.half	.L133-.L190
-	.byte	3,252,3,1,4,1,5,29,9
-	.half	.L134-.L133
-	.byte	3,133,124,1,5,46,9
-	.half	.L191-.L134
+	.half	.L137-.L194
+	.byte	3,250,3,1,4,1,5,29,9
+	.half	.L138-.L137
+	.byte	3,135,124,1,5,46,9
+	.half	.L195-.L138
 	.byte	1,4,2,5,40,9
-	.half	.L142-.L191
-	.byte	3,251,3,1,4,1,5,29,9
-	.half	.L143-.L142
-	.byte	3,135,124,1,5,45,9
-	.half	.L192-.L143
-	.byte	1,4,2,5,40,9
-	.half	.L144-.L192
+	.half	.L146-.L195
 	.byte	3,249,3,1,4,1,5,29,9
-	.half	.L145-.L144
-	.byte	3,136,124,1,5,45,9
-	.half	.L193-.L145
-	.byte	1,4,2,5,40,9
-	.half	.L146-.L193
-	.byte	3,248,3,1,4,1,5,1,9
 	.half	.L147-.L146
-	.byte	3,137,124,1,7,9
-	.half	.L62-.L147
+	.byte	3,137,124,1,5,45,9
+	.half	.L196-.L147
+	.byte	1,4,2,5,40,9
+	.half	.L148-.L196
+	.byte	3,247,3,1,4,1,5,29,9
+	.half	.L149-.L148
+	.byte	3,138,124,1,5,45,9
+	.half	.L197-.L149
+	.byte	1,4,2,5,40,9
+	.half	.L150-.L197
+	.byte	3,246,3,1,4,1,5,1,9
+	.half	.L151-.L150
+	.byte	3,139,124,1,7,9
+	.half	.L62-.L151
 	.byte	0,1,1
-.L187:
+.L191:
 	.sdecl	'.debug_ranges',debug,cluster('Encoder_init')
 	.sect	'.debug_ranges'
 .L61:
@@ -6523,44 +6573,44 @@ Right_velocity_rpm:	.type	object
 	.byte	2
 	.word	.L54
 	.byte	3
-	.byte	'Encoder_cnt_left',0,1,79,6,1,1,1
-	.word	.L47,.L148,.L46
+	.byte	'Encoder_cnt_left',0,1,81,6,1,1,1
+	.word	.L47,.L152,.L46
 	.byte	4
-	.word	.L47,.L148
+	.word	.L47,.L152
 	.byte	5
-	.word	.L149,.L150,.L4
+	.word	.L153,.L154,.L4
 	.byte	6
-	.word	.L151,.L152
-	.byte	6
-	.word	.L153,.L154
-	.byte	7
 	.word	.L155,.L156
-	.byte	0,5
-	.word	.L149,.L157,.L158
 	.byte	6
-	.word	.L151,.L152
-	.byte	6
-	.word	.L153,.L154
-	.byte	0,5
-	.word	.L149,.L159,.L7
-	.byte	6
-	.word	.L151,.L152
-	.byte	6
-	.word	.L153,.L154
+	.word	.L157,.L158
 	.byte	7
-	.word	.L155,.L160
+	.word	.L159,.L160
 	.byte	0,5
-	.word	.L149,.L161,.L162
+	.word	.L153,.L161,.L162
 	.byte	6
-	.word	.L151,.L152
+	.word	.L155,.L156
 	.byte	6
-	.word	.L153,.L154
+	.word	.L157,.L158
 	.byte	0,5
-	.word	.L149,.L163,.L164
+	.word	.L153,.L163,.L7
 	.byte	6
-	.word	.L151,.L152
+	.word	.L155,.L156
 	.byte	6
-	.word	.L153,.L154
+	.word	.L157,.L158
+	.byte	7
+	.word	.L159,.L164
+	.byte	0,5
+	.word	.L153,.L165,.L166
+	.byte	6
+	.word	.L155,.L156
+	.byte	6
+	.word	.L157,.L158
+	.byte	0,5
+	.word	.L153,.L167,.L168
+	.byte	6
+	.word	.L155,.L156
+	.byte	6
+	.word	.L157,.L158
 	.byte	0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Encoder_cnt_left')
 	.sect	'.debug_abbrev'
@@ -6571,209 +6621,209 @@ Right_velocity_rpm:	.type	object
 	.sdecl	'.debug_line',debug,cluster('Encoder_cnt_left')
 	.sect	'.debug_line'
 .L65:
-	.word	.L195-.L194
-.L194:
+	.word	.L199-.L198
+.L198:
 	.half	3
-	.word	.L197-.L196
-.L196:
+	.word	.L201-.L200
+.L200:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Port\\\\Std',0
 	.byte	0
 	.byte	'../Sensor_input/Encoder.c',0,0,0,0
 	.byte	'IfxPort.h',0,1,0,0,0
-.L197:
+.L201:
 	.byte	5,38,7,0,5,2
 	.word	.L47
-	.byte	3,208,0,1,4,2,5,13,9
-	.half	.L150-.L47
-	.byte	3,219,3,1,5,12,9
-	.half	.L198-.L150
+	.byte	3,210,0,1,4,2,5,13,9
+	.half	.L154-.L47
+	.byte	3,217,3,1,5,12,9
+	.half	.L202-.L154
 	.byte	1,5,51,7,9
-	.half	.L199-.L198
+	.half	.L203-.L202
 	.byte	1,5,58,9
-	.half	.L200-.L199
+	.half	.L204-.L203
 	.byte	1,5,51,9
-	.half	.L2-.L200
+	.half	.L2-.L204
 	.byte	1,5,5,9
 	.half	.L3-.L2
 	.byte	1,4,1,9
 	.half	.L4-.L3
-	.byte	3,165,124,1,5,16,9
-	.half	.L157-.L4
+	.byte	3,167,124,1,5,16,9
+	.half	.L161-.L4
 	.byte	1,5,38,9
-	.half	.L158-.L157
+	.half	.L162-.L161
 	.byte	3,1,1,4,2,5,13,9
-	.half	.L159-.L158
-	.byte	3,218,3,1,5,12,9
-	.half	.L201-.L159
+	.half	.L163-.L162
+	.byte	3,216,3,1,5,12,9
+	.half	.L205-.L163
 	.byte	1,5,51,7,9
-	.half	.L202-.L201
+	.half	.L206-.L205
 	.byte	1,5,58,9
-	.half	.L203-.L202
+	.half	.L207-.L206
 	.byte	1,5,51,9
-	.half	.L5-.L203
+	.half	.L5-.L207
 	.byte	1,5,5,9
 	.half	.L6-.L5
 	.byte	1,4,1,9
 	.half	.L7-.L6
-	.byte	3,166,124,1,5,16,9
-	.half	.L161-.L7
+	.byte	3,168,124,1,5,16,9
+	.half	.L165-.L7
 	.byte	1,5,5,9
-	.half	.L162-.L161
+	.half	.L166-.L165
 	.byte	3,1,1,5,20,9
-	.half	.L204-.L162
+	.half	.L208-.L166
 	.byte	1,5,31,9
-	.half	.L205-.L204
-	.byte	1,5,37,9
-	.half	.L163-.L205
-	.byte	1,5,17,9
-	.half	.L164-.L163
-	.byte	1,5,8,9
-	.half	.L206-.L164
-	.byte	3,2,1,5,5,9
-	.half	.L207-.L206
-	.byte	1,5,12,7,9
-	.half	.L208-.L207
-	.byte	3,1,1,5,9,9
 	.half	.L209-.L208
-	.byte	1,5,13,7,9
-	.half	.L210-.L209
-	.byte	3,1,1,5,23,9
+	.byte	1,5,37,9
+	.half	.L167-.L209
+	.byte	1,5,17,9
+	.half	.L168-.L167
+	.byte	1,5,8,9
+	.half	.L210-.L168
+	.byte	3,2,1,5,5,9
 	.half	.L211-.L210
-	.byte	1,5,12,9
-	.half	.L9-.L211
-	.byte	3,2,1,5,9,9
-	.half	.L212-.L9
-	.byte	1,5,13,7,9
+	.byte	1,5,12,7,9
+	.half	.L212-.L211
+	.byte	3,1,1,5,9,9
 	.half	.L213-.L212
-	.byte	3,1,1,5,23,9
+	.byte	1,5,13,7,9
 	.half	.L214-.L213
+	.byte	3,1,1,5,23,9
+	.half	.L215-.L214
+	.byte	1,5,12,9
+	.half	.L9-.L215
+	.byte	3,2,1,5,9,9
+	.half	.L216-.L9
+	.byte	1,5,13,7,9
+	.half	.L217-.L216
+	.byte	3,1,1,5,23,9
+	.half	.L218-.L217
 	.byte	1,5,9,9
-	.half	.L10-.L214
+	.half	.L10-.L218
 	.byte	3,127,1,5,13,9
 	.half	.L8-.L10
 	.byte	3,4,1,5,10,9
-	.half	.L215-.L8
+	.half	.L219-.L8
 	.byte	1,5,12,7,9
-	.half	.L216-.L215
+	.half	.L220-.L219
 	.byte	3,1,1,5,9,9
-	.half	.L217-.L216
-	.byte	1,5,13,7,9
-	.half	.L218-.L217
-	.byte	3,1,1,5,23,9
-	.half	.L219-.L218
-	.byte	1,5,12,9
-	.half	.L13-.L219
-	.byte	3,2,1,5,9,9
-	.half	.L220-.L13
-	.byte	1,5,13,7,9
 	.half	.L221-.L220
-	.byte	3,1,1,5,23,9
+	.byte	1,5,13,7,9
 	.half	.L222-.L221
+	.byte	3,1,1,5,23,9
+	.half	.L223-.L222
+	.byte	1,5,12,9
+	.half	.L13-.L223
+	.byte	3,2,1,5,9,9
+	.half	.L224-.L13
+	.byte	1,5,13,7,9
+	.half	.L225-.L224
+	.byte	3,1,1,5,23,9
+	.half	.L226-.L225
 	.byte	1,5,9,9
-	.half	.L14-.L222
+	.half	.L14-.L226
 	.byte	3,127,1,5,13,9
 	.half	.L12-.L14
 	.byte	3,4,1,5,10,9
-	.half	.L223-.L12
+	.half	.L227-.L12
 	.byte	1,5,12,7,9
-	.half	.L224-.L223
+	.half	.L228-.L227
 	.byte	3,1,1,5,9,9
-	.half	.L225-.L224
-	.byte	1,5,13,7,9
-	.half	.L226-.L225
-	.byte	3,1,1,5,23,9
-	.half	.L227-.L226
-	.byte	1,5,12,9
-	.half	.L17-.L227
-	.byte	3,2,1,5,9,9
-	.half	.L228-.L17
-	.byte	1,5,13,7,9
 	.half	.L229-.L228
-	.byte	3,1,1,5,23,9
+	.byte	1,5,13,7,9
 	.half	.L230-.L229
+	.byte	3,1,1,5,23,9
+	.half	.L231-.L230
+	.byte	1,5,12,9
+	.half	.L17-.L231
+	.byte	3,2,1,5,9,9
+	.half	.L232-.L17
+	.byte	1,5,13,7,9
+	.half	.L233-.L232
+	.byte	3,1,1,5,23,9
+	.half	.L234-.L233
 	.byte	1,5,9,9
-	.half	.L18-.L230
+	.half	.L18-.L234
 	.byte	3,127,1,5,13,9
 	.half	.L16-.L18
 	.byte	3,4,1,5,10,9
-	.half	.L231-.L16
+	.half	.L235-.L16
 	.byte	1,5,12,7,9
-	.half	.L232-.L231
+	.half	.L236-.L235
 	.byte	3,1,1,5,9,9
-	.half	.L233-.L232
-	.byte	1,5,13,7,9
-	.half	.L234-.L233
-	.byte	3,1,1,5,23,9
-	.half	.L235-.L234
-	.byte	1,5,12,9
-	.half	.L21-.L235
-	.byte	3,2,1,5,9,9
-	.half	.L236-.L21
-	.byte	1,5,13,7,9
 	.half	.L237-.L236
-	.byte	3,1,1,5,23,9
+	.byte	1,5,13,7,9
 	.half	.L238-.L237
-	.byte	1,5,5,9
-	.half	.L11-.L238
-	.byte	3,4,1,5,24,9
-	.half	.L239-.L11
-	.byte	1,5,22,9
-	.half	.L240-.L239
-	.byte	1,5,5,9
+	.byte	3,1,1,5,23,9
+	.half	.L239-.L238
+	.byte	1,5,12,9
+	.half	.L21-.L239
+	.byte	3,2,1,5,9,9
+	.half	.L240-.L21
+	.byte	1,5,13,7,9
 	.half	.L241-.L240
-	.byte	3,2,1,5,20,9
+	.byte	3,1,1,5,23,9
 	.half	.L242-.L241
-	.byte	1,5,31,9
-	.half	.L243-.L242
-	.byte	1,5,37,9
+	.byte	1,5,5,9
+	.half	.L11-.L242
+	.byte	3,4,1,5,24,9
+	.half	.L243-.L11
+	.byte	1,5,22,9
 	.half	.L244-.L243
-	.byte	1,5,35,9
+	.byte	1,5,5,9
 	.half	.L245-.L244
-	.byte	1,5,48,9
+	.byte	3,2,1,5,20,9
 	.half	.L246-.L245
-	.byte	1,5,46,9
+	.byte	1,5,31,9
 	.half	.L247-.L246
-	.byte	1,5,18,9
+	.byte	1,5,37,9
 	.half	.L248-.L247
-	.byte	1,5,5,9
+	.byte	1,5,35,9
 	.half	.L249-.L248
-	.byte	3,1,1,5,29,9
-	.half	.L250-.L249
-	.byte	1,5,42,9
-	.half	.L251-.L250
-	.byte	1,5,40,9
-	.half	.L252-.L251
 	.byte	1,5,48,9
-	.half	.L253-.L252
+	.half	.L250-.L249
 	.byte	1,5,46,9
-	.half	.L254-.L253
+	.half	.L251-.L250
 	.byte	1,5,18,9
-	.half	.L255-.L254
+	.half	.L252-.L251
 	.byte	1,5,5,9
+	.half	.L253-.L252
+	.byte	3,1,1,5,29,9
+	.half	.L254-.L253
+	.byte	1,5,42,9
+	.half	.L255-.L254
+	.byte	1,5,40,9
 	.half	.L256-.L255
-	.byte	3,2,1,5,18,9
+	.byte	1,5,48,9
 	.half	.L257-.L256
-	.byte	1,5,16,9
+	.byte	1,5,46,9
 	.half	.L258-.L257
-	.byte	1,5,1,9
+	.byte	1,5,18,9
 	.half	.L259-.L258
+	.byte	1,5,5,9
+	.half	.L260-.L259
+	.byte	3,2,1,5,18,9
+	.half	.L261-.L260
+	.byte	1,5,16,9
+	.half	.L262-.L261
+	.byte	1,5,1,9
+	.half	.L263-.L262
 	.byte	3,2,1,7,9
-	.half	.L67-.L259
+	.half	.L67-.L263
 	.byte	0,1,1
-.L195:
+.L199:
 	.sdecl	'.debug_ranges',debug,cluster('Encoder_cnt_left')
 	.sect	'.debug_ranges'
 .L66:
 	.word	-1,.L47,0,.L67-.L47,0,0
-.L156:
-	.word	-1,.L47,.L150-.L47,.L4-.L47,.L157-.L47,.L158-.L47,0,0
 .L160:
-	.word	-1,.L47,.L159-.L47,.L7-.L47,.L161-.L47,.L162-.L47,.L163-.L47,.L164-.L47,0,0
+	.word	-1,.L47,.L154-.L47,.L4-.L47,.L161-.L47,.L162-.L47,0,0
+.L164:
+	.word	-1,.L47,.L163-.L47,.L7-.L47,.L165-.L47,.L166-.L47,.L167-.L47,.L168-.L47,0,0
 	.sdecl	'.debug_info',debug,cluster('Encoder_cnt_right')
 	.sect	'.debug_info'
 .L68:
-	.word	451
+	.word	452
 	.half	3
 	.word	.L69
 	.byte	4,1
@@ -6785,44 +6835,44 @@ Right_velocity_rpm:	.type	object
 	.byte	2
 	.word	.L54
 	.byte	3
-	.byte	'Encoder_cnt_right',0,1,127,6,1,1,1
-	.word	.L49,.L165,.L48
+	.byte	'Encoder_cnt_right',0,1,129,1,6,1,1,1
+	.word	.L49,.L169,.L48
 	.byte	4
-	.word	.L49,.L165
+	.word	.L49,.L169
 	.byte	5
-	.word	.L149,.L166,.L25
+	.word	.L153,.L170,.L25
 	.byte	6
-	.word	.L151,.L167
+	.word	.L155,.L171
 	.byte	6
-	.word	.L153,.L168
+	.word	.L157,.L172
 	.byte	7
-	.word	.L155,.L169
+	.word	.L159,.L173
 	.byte	0,5
-	.word	.L149,.L170,.L171
+	.word	.L153,.L174,.L175
 	.byte	6
-	.word	.L151,.L167
+	.word	.L155,.L171
 	.byte	6
-	.word	.L153,.L168
+	.word	.L157,.L172
 	.byte	0,5
-	.word	.L149,.L172,.L28
+	.word	.L153,.L176,.L28
 	.byte	6
-	.word	.L151,.L167
+	.word	.L155,.L171
 	.byte	6
-	.word	.L153,.L168
+	.word	.L157,.L172
 	.byte	7
-	.word	.L155,.L173
+	.word	.L159,.L177
 	.byte	0,5
-	.word	.L149,.L174,.L175
+	.word	.L153,.L178,.L179
 	.byte	6
-	.word	.L151,.L167
+	.word	.L155,.L171
 	.byte	6
-	.word	.L153,.L168
+	.word	.L157,.L172
 	.byte	0,5
-	.word	.L149,.L176,.L177
+	.word	.L153,.L180,.L181
 	.byte	6
-	.word	.L151,.L167
+	.word	.L155,.L171
 	.byte	6
-	.word	.L153,.L168
+	.word	.L157,.L172
 	.byte	0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Encoder_cnt_right')
 	.sect	'.debug_abbrev'
@@ -6833,205 +6883,205 @@ Right_velocity_rpm:	.type	object
 	.sdecl	'.debug_line',debug,cluster('Encoder_cnt_right')
 	.sect	'.debug_line'
 .L70:
-	.word	.L261-.L260
-.L260:
+	.word	.L265-.L264
+.L264:
 	.half	3
-	.word	.L263-.L262
-.L262:
+	.word	.L267-.L266
+.L266:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\user\\\\AURIX-v1.9.20-workspace\\\\TC275_SelfDriving\\\\LKAS_ACC_project\\\\Libraries\\\\iLLD\\\\TC27D\\\\Tricore\\\\Port\\\\Std',0
 	.byte	0
 	.byte	'../Sensor_input/Encoder.c',0,0,0,0
 	.byte	'IfxPort.h',0,1,0,0,0
-.L263:
+.L267:
 	.byte	5,39,7,0,5,2
 	.word	.L49
-	.byte	3,128,1,1,4,2,5,13,9
-	.half	.L166-.L49
-	.byte	3,171,3,1,5,12,9
-	.half	.L264-.L166
+	.byte	3,130,1,1,4,2,5,13,9
+	.half	.L170-.L49
+	.byte	3,169,3,1,5,12,9
+	.half	.L268-.L170
 	.byte	1,5,51,7,9
-	.half	.L265-.L264
+	.half	.L269-.L268
 	.byte	1,5,58,9
-	.half	.L266-.L265
+	.half	.L270-.L269
 	.byte	1,5,51,9
-	.half	.L23-.L266
+	.half	.L23-.L270
 	.byte	1,5,5,9
 	.half	.L24-.L23
 	.byte	1,4,1,9
 	.half	.L25-.L24
-	.byte	3,213,124,1,5,17,9
-	.half	.L170-.L25
+	.byte	3,215,124,1,5,17,9
+	.half	.L174-.L25
 	.byte	1,5,39,9
-	.half	.L171-.L170
+	.half	.L175-.L174
 	.byte	3,1,1,4,2,5,13,9
-	.half	.L172-.L171
-	.byte	3,170,3,1,5,12,9
-	.half	.L267-.L172
+	.half	.L176-.L175
+	.byte	3,168,3,1,5,12,9
+	.half	.L271-.L176
 	.byte	1,5,51,7,9
-	.half	.L268-.L267
+	.half	.L272-.L271
 	.byte	1,5,58,9
-	.half	.L269-.L268
+	.half	.L273-.L272
 	.byte	1,5,51,9
-	.half	.L26-.L269
+	.half	.L26-.L273
 	.byte	1,5,5,9
 	.half	.L27-.L26
 	.byte	1,4,1,9
 	.half	.L28-.L27
-	.byte	3,214,124,1,5,17,9
-	.half	.L174-.L28
+	.byte	3,216,124,1,5,17,9
+	.half	.L178-.L28
 	.byte	1,5,5,9
-	.half	.L175-.L174
+	.half	.L179-.L178
 	.byte	3,1,1,5,21,9
-	.half	.L270-.L175
+	.half	.L274-.L179
 	.byte	1,5,33,9
-	.half	.L271-.L270
-	.byte	1,5,39,9
-	.half	.L176-.L271
-	.byte	1,5,18,9
-	.half	.L177-.L176
-	.byte	1,5,8,9
-	.half	.L272-.L177
-	.byte	3,2,1,5,5,9
-	.half	.L273-.L272
-	.byte	1,5,12,7,9
-	.half	.L274-.L273
-	.byte	3,1,1,5,9,9
 	.half	.L275-.L274
-	.byte	1,5,13,7,9
-	.half	.L276-.L275
-	.byte	3,1,1,5,24,9
+	.byte	1,5,39,9
+	.half	.L180-.L275
+	.byte	1,5,18,9
+	.half	.L181-.L180
+	.byte	1,5,8,9
+	.half	.L276-.L181
+	.byte	3,2,1,5,5,9
 	.half	.L277-.L276
-	.byte	1,5,12,9
-	.half	.L30-.L277
-	.byte	3,2,1,5,9,9
-	.half	.L278-.L30
-	.byte	1,5,13,7,9
+	.byte	1,5,12,7,9
+	.half	.L278-.L277
+	.byte	3,1,1,5,9,9
 	.half	.L279-.L278
-	.byte	3,1,1,5,24,9
+	.byte	1,5,13,7,9
 	.half	.L280-.L279
+	.byte	3,1,1,5,24,9
+	.half	.L281-.L280
+	.byte	1,5,12,9
+	.half	.L30-.L281
+	.byte	3,2,1,5,9,9
+	.half	.L282-.L30
+	.byte	1,5,13,7,9
+	.half	.L283-.L282
+	.byte	3,1,1,5,24,9
+	.half	.L284-.L283
 	.byte	1,5,9,9
-	.half	.L31-.L280
+	.half	.L31-.L284
 	.byte	3,127,1,5,13,9
 	.half	.L29-.L31
 	.byte	3,4,1,5,10,9
-	.half	.L281-.L29
+	.half	.L285-.L29
 	.byte	1,5,12,7,9
-	.half	.L282-.L281
+	.half	.L286-.L285
 	.byte	3,1,1,5,9,9
-	.half	.L283-.L282
-	.byte	1,5,13,7,9
-	.half	.L284-.L283
-	.byte	3,1,1,5,24,9
-	.half	.L285-.L284
-	.byte	1,5,12,9
-	.half	.L34-.L285
-	.byte	3,2,1,5,9,9
-	.half	.L286-.L34
-	.byte	1,5,13,7,9
 	.half	.L287-.L286
-	.byte	3,1,1,5,24,9
+	.byte	1,5,13,7,9
 	.half	.L288-.L287
+	.byte	3,1,1,5,24,9
+	.half	.L289-.L288
+	.byte	1,5,12,9
+	.half	.L34-.L289
+	.byte	3,2,1,5,9,9
+	.half	.L290-.L34
+	.byte	1,5,13,7,9
+	.half	.L291-.L290
+	.byte	3,1,1,5,24,9
+	.half	.L292-.L291
 	.byte	1,5,9,9
-	.half	.L35-.L288
+	.half	.L35-.L292
 	.byte	3,127,1,5,13,9
 	.half	.L33-.L35
 	.byte	3,4,1,5,10,9
-	.half	.L289-.L33
+	.half	.L293-.L33
 	.byte	1,5,12,7,9
-	.half	.L290-.L289
+	.half	.L294-.L293
 	.byte	3,1,1,5,9,9
-	.half	.L291-.L290
-	.byte	1,5,13,7,9
-	.half	.L292-.L291
-	.byte	3,1,1,5,24,9
-	.half	.L293-.L292
-	.byte	1,5,12,9
-	.half	.L38-.L293
-	.byte	3,2,1,5,9,9
-	.half	.L294-.L38
-	.byte	1,5,13,7,9
 	.half	.L295-.L294
-	.byte	3,1,1,5,24,9
+	.byte	1,5,13,7,9
 	.half	.L296-.L295
+	.byte	3,1,1,5,24,9
+	.half	.L297-.L296
+	.byte	1,5,12,9
+	.half	.L38-.L297
+	.byte	3,2,1,5,9,9
+	.half	.L298-.L38
+	.byte	1,5,13,7,9
+	.half	.L299-.L298
+	.byte	3,1,1,5,24,9
+	.half	.L300-.L299
 	.byte	1,5,9,9
-	.half	.L39-.L296
+	.half	.L39-.L300
 	.byte	3,127,1,5,13,9
 	.half	.L37-.L39
 	.byte	3,4,1,5,10,9
-	.half	.L297-.L37
+	.half	.L301-.L37
 	.byte	1,5,12,7,9
-	.half	.L298-.L297
+	.half	.L302-.L301
 	.byte	3,1,1,5,9,9
-	.half	.L299-.L298
-	.byte	1,5,13,7,9
-	.half	.L300-.L299
-	.byte	3,1,1,5,24,9
-	.half	.L301-.L300
-	.byte	1,5,12,9
-	.half	.L42-.L301
-	.byte	3,2,1,5,9,9
-	.half	.L302-.L42
-	.byte	1,5,13,7,9
 	.half	.L303-.L302
-	.byte	3,1,1,5,24,9
+	.byte	1,5,13,7,9
 	.half	.L304-.L303
-	.byte	1,5,5,9
-	.half	.L32-.L304
-	.byte	3,4,1,5,25,9
-	.half	.L305-.L32
-	.byte	1,5,23,9
-	.half	.L306-.L305
-	.byte	1,5,5,9
+	.byte	3,1,1,5,24,9
+	.half	.L305-.L304
+	.byte	1,5,12,9
+	.half	.L42-.L305
+	.byte	3,2,1,5,9,9
+	.half	.L306-.L42
+	.byte	1,5,13,7,9
 	.half	.L307-.L306
-	.byte	3,2,1,5,21,9
+	.byte	3,1,1,5,24,9
 	.half	.L308-.L307
-	.byte	1,5,33,9
-	.half	.L309-.L308
-	.byte	1,5,39,9
+	.byte	1,5,5,9
+	.half	.L32-.L308
+	.byte	3,4,1,5,25,9
+	.half	.L309-.L32
+	.byte	1,5,23,9
 	.half	.L310-.L309
-	.byte	1,5,37,9
+	.byte	1,5,5,9
 	.half	.L311-.L310
-	.byte	1,5,50,9
+	.byte	3,2,1,5,21,9
 	.half	.L312-.L311
-	.byte	1,5,48,9
+	.byte	1,5,33,9
 	.half	.L313-.L312
-	.byte	1,5,19,9
+	.byte	1,5,39,9
 	.half	.L314-.L313
-	.byte	1,5,5,9
+	.byte	1,5,37,9
 	.half	.L315-.L314
-	.byte	3,1,1,5,30,9
-	.half	.L316-.L315
-	.byte	1,5,44,9
-	.half	.L317-.L316
-	.byte	1,5,42,9
-	.half	.L318-.L317
 	.byte	1,5,50,9
-	.half	.L319-.L318
+	.half	.L316-.L315
 	.byte	1,5,48,9
-	.half	.L320-.L319
+	.half	.L317-.L316
 	.byte	1,5,19,9
-	.half	.L321-.L320
+	.half	.L318-.L317
 	.byte	1,5,5,9
+	.half	.L319-.L318
+	.byte	3,1,1,5,30,9
+	.half	.L320-.L319
+	.byte	1,5,44,9
+	.half	.L321-.L320
+	.byte	1,5,42,9
 	.half	.L322-.L321
-	.byte	3,2,1,5,19,9
+	.byte	1,5,50,9
 	.half	.L323-.L322
-	.byte	1,5,17,9
+	.byte	1,5,48,9
 	.half	.L324-.L323
-	.byte	1,5,1,9
+	.byte	1,5,19,9
 	.half	.L325-.L324
+	.byte	1,5,5,9
+	.half	.L326-.L325
+	.byte	3,2,1,5,19,9
+	.half	.L327-.L326
+	.byte	1,5,17,9
+	.half	.L328-.L327
+	.byte	1,5,1,9
+	.half	.L329-.L328
 	.byte	3,2,1,7,9
-	.half	.L72-.L325
+	.half	.L72-.L329
 	.byte	0,1,1
-.L261:
+.L265:
 	.sdecl	'.debug_ranges',debug,cluster('Encoder_cnt_right')
 	.sect	'.debug_ranges'
 .L71:
 	.word	-1,.L49,0,.L72-.L49,0,0
-.L169:
-	.word	-1,.L49,.L166-.L49,.L25-.L49,.L170-.L49,.L171-.L49,0,0
 .L173:
-	.word	-1,.L49,.L172-.L49,.L28-.L49,.L174-.L49,.L175-.L49,.L176-.L49,.L177-.L49,0,0
+	.word	-1,.L49,.L170-.L49,.L25-.L49,.L174-.L49,.L175-.L49,0,0
+.L177:
+	.word	-1,.L49,.L176-.L49,.L28-.L49,.L178-.L49,.L179-.L49,.L180-.L49,.L181-.L49,0,0
 	.sdecl	'.debug_info',debug,cluster('velocity_cal_left')
 	.sect	'.debug_info'
 .L73:
@@ -7047,10 +7097,10 @@ Right_velocity_rpm:	.type	object
 	.byte	2
 	.word	.L54
 	.byte	3
-	.byte	'velocity_cal_left',0,1,176,1,6,1,1,1
-	.word	.L51,.L178,.L50
+	.byte	'velocity_cal_left',0,1,180,1,6,1,1,1
+	.word	.L51,.L182,.L50
 	.byte	4
-	.word	.L51,.L178
+	.word	.L51,.L182
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('velocity_cal_left')
 	.sect	'.debug_abbrev'
@@ -7060,76 +7110,90 @@ Right_velocity_rpm:	.type	object
 	.sdecl	'.debug_line',debug,cluster('velocity_cal_left')
 	.sect	'.debug_line'
 .L75:
-	.word	.L327-.L326
-.L326:
+	.word	.L331-.L330
+.L330:
 	.half	3
-	.word	.L329-.L328
-.L328:
+	.word	.L333-.L332
+.L332:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../Sensor_input/Encoder.c',0,0,0,0,0
-.L329:
+.L333:
 	.byte	5,5,7,0,5,2
 	.word	.L51
-	.byte	3,176,1,1,5,22,9
-	.half	.L330-.L51
+	.byte	3,180,1,1,5,22,9
+	.half	.L334-.L51
 	.byte	1,5,37,9
-	.half	.L331-.L330
-	.byte	1,5,35,9
-	.half	.L332-.L331
-	.byte	1,5,56,9
-	.half	.L333-.L332
-	.byte	1,5,55,9
-	.half	.L334-.L333
-	.byte	1,5,19,9
 	.half	.L335-.L334
-	.byte	1,5,5,9
+	.byte	1,5,35,9
 	.half	.L336-.L335
-	.byte	3,2,1,5,25,9
+	.byte	1,5,56,9
 	.half	.L337-.L336
-	.byte	1,5,45,9
+	.byte	1,5,55,9
 	.half	.L338-.L337
-	.byte	1,5,60,9
-	.half	.L339-.L338
-	.byte	1,5,67,9
-	.half	.L340-.L339
-	.byte	1,5,24,9
-	.half	.L341-.L340
 	.byte	1,5,19,9
-	.half	.L342-.L341
+	.half	.L339-.L338
 	.byte	1,5,5,9
+	.half	.L340-.L339
+	.byte	3,2,1,5,25,9
+	.half	.L341-.L340
+	.byte	1,5,45,9
+	.half	.L342-.L341
+	.byte	1,5,60,9
 	.half	.L343-.L342
-	.byte	3,2,1,5,26,9
+	.byte	1,5,67,9
 	.half	.L344-.L343
 	.byte	1,5,24,9
 	.half	.L345-.L344
-	.byte	1,5,5,9
+	.byte	1,5,19,9
 	.half	.L346-.L345
-	.byte	3,2,1,5,37,9
-	.half	.L347-.L346
-	.byte	1,5,34,9
-	.half	.L348-.L347
-	.byte	1,5,36,9
-	.half	.L349-.L348
-	.byte	1,5,53,9
-	.half	.L350-.L349
-	.byte	1,5,50,9
-	.half	.L351-.L350
-	.byte	1,5,25,9
-	.half	.L352-.L351
-	.byte	1,5,23,9
-	.half	.L353-.L352
 	.byte	1,5,5,9
+	.half	.L347-.L346
+	.byte	3,2,1,5,26,9
+	.half	.L348-.L347
+	.byte	1,5,24,9
+	.half	.L349-.L348
+	.byte	1,5,5,9
+	.half	.L350-.L349
+	.byte	3,2,1,5,37,9
+	.half	.L351-.L350
+	.byte	1,5,34,9
+	.half	.L352-.L351
+	.byte	1,5,36,9
+	.half	.L353-.L352
+	.byte	1,5,53,9
 	.half	.L354-.L353
-	.byte	3,2,1,5,25,9
+	.byte	1,5,50,9
 	.half	.L355-.L354
-	.byte	1,5,23,9
+	.byte	1,5,25,9
 	.half	.L356-.L355
-	.byte	1,5,1,9
+	.byte	1,5,23,9
 	.half	.L357-.L356
+	.byte	1,5,5,9
+	.half	.L358-.L357
+	.byte	3,2,1,5,25,9
+	.half	.L359-.L358
+	.byte	1,5,23,9
+	.half	.L360-.L359
+	.byte	1,5,5,9
+	.half	.L361-.L360
+	.byte	3,2,1,5,33,9
+	.half	.L362-.L361
+	.byte	1,5,25,9
+	.half	.L363-.L362
+	.byte	1,5,31,9
+	.half	.L364-.L363
+	.byte	1,5,49,9
+	.half	.L365-.L364
+	.byte	1,5,47,9
+	.half	.L366-.L365
+	.byte	1,5,23,9
+	.half	.L367-.L366
+	.byte	1,5,1,9
+	.half	.L368-.L367
 	.byte	3,1,1,7,9
-	.half	.L77-.L357
+	.half	.L77-.L368
 	.byte	0,1,1
-.L327:
+.L331:
 	.sdecl	'.debug_ranges',debug,cluster('velocity_cal_left')
 	.sect	'.debug_ranges'
 .L76:
@@ -7149,10 +7213,10 @@ Right_velocity_rpm:	.type	object
 	.byte	2
 	.word	.L54
 	.byte	3
-	.byte	'velocity_cal_right',0,1,188,1,6,1,1,1
-	.word	.L53,.L179,.L52
+	.byte	'velocity_cal_right',0,1,194,1,6,1,1,1
+	.word	.L53,.L183,.L52
 	.byte	4
-	.word	.L53,.L179
+	.word	.L53,.L183
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('velocity_cal_right')
 	.sect	'.debug_abbrev'
@@ -7162,76 +7226,90 @@ Right_velocity_rpm:	.type	object
 	.sdecl	'.debug_line',debug,cluster('velocity_cal_right')
 	.sect	'.debug_line'
 .L80:
-	.word	.L359-.L358
-.L358:
+	.word	.L370-.L369
+.L369:
 	.half	3
-	.word	.L361-.L360
-.L360:
+	.word	.L372-.L371
+.L371:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../Sensor_input/Encoder.c',0,0,0,0,0
-.L361:
+.L372:
 	.byte	5,5,7,0,5,2
 	.word	.L53
-	.byte	3,188,1,1,5,23,9
-	.half	.L362-.L53
+	.byte	3,194,1,1,5,23,9
+	.half	.L373-.L53
 	.byte	1,5,39,9
-	.half	.L363-.L362
-	.byte	1,5,37,9
-	.half	.L364-.L363
-	.byte	1,5,59,9
-	.half	.L365-.L364
-	.byte	1,5,58,9
-	.half	.L366-.L365
-	.byte	1,5,20,9
-	.half	.L367-.L366
-	.byte	1,5,5,9
-	.half	.L368-.L367
-	.byte	3,2,1,5,26,9
-	.half	.L369-.L368
-	.byte	1,5,47,9
-	.half	.L370-.L369
-	.byte	1,5,63,9
-	.half	.L371-.L370
-	.byte	1,5,70,9
-	.half	.L372-.L371
-	.byte	1,5,25,9
-	.half	.L373-.L372
-	.byte	1,5,20,9
 	.half	.L374-.L373
-	.byte	1,5,5,9
-	.half	.L375-.L374
-	.byte	3,2,1,5,27,9
-	.half	.L376-.L375
-	.byte	1,5,25,9
-	.half	.L377-.L376
-	.byte	1,5,5,9
-	.half	.L378-.L377
-	.byte	3,2,1,5,38,9
-	.half	.L379-.L378
-	.byte	1,5,35,9
-	.half	.L380-.L379
 	.byte	1,5,37,9
+	.half	.L375-.L374
+	.byte	1,5,59,9
+	.half	.L376-.L375
+	.byte	1,5,58,9
+	.half	.L377-.L376
+	.byte	1,5,20,9
+	.half	.L378-.L377
+	.byte	1,5,5,9
+	.half	.L379-.L378
+	.byte	3,2,1,5,26,9
+	.half	.L380-.L379
+	.byte	1,5,47,9
 	.half	.L381-.L380
-	.byte	1,5,55,9
+	.byte	1,5,63,9
 	.half	.L382-.L381
-	.byte	1,5,52,9
+	.byte	1,5,70,9
 	.half	.L383-.L382
-	.byte	1,5,26,9
+	.byte	1,5,25,9
 	.half	.L384-.L383
-	.byte	1,5,24,9
+	.byte	1,5,20,9
 	.half	.L385-.L384
 	.byte	1,5,5,9
 	.half	.L386-.L385
-	.byte	3,2,1,5,26,9
+	.byte	3,2,1,5,27,9
 	.half	.L387-.L386
-	.byte	1,5,24,9
+	.byte	1,5,25,9
 	.half	.L388-.L387
-	.byte	1,5,1,9
+	.byte	1,5,5,9
 	.half	.L389-.L388
+	.byte	3,2,1,5,38,9
+	.half	.L390-.L389
+	.byte	1,5,35,9
+	.half	.L391-.L390
+	.byte	1,5,37,9
+	.half	.L392-.L391
+	.byte	1,5,55,9
+	.half	.L393-.L392
+	.byte	1,5,52,9
+	.half	.L394-.L393
+	.byte	1,5,26,9
+	.half	.L395-.L394
+	.byte	1,5,24,9
+	.half	.L396-.L395
+	.byte	1,5,5,9
+	.half	.L397-.L396
+	.byte	3,2,1,5,26,9
+	.half	.L398-.L397
+	.byte	1,5,24,9
+	.half	.L399-.L398
+	.byte	1,5,5,9
+	.half	.L400-.L399
+	.byte	3,2,1,5,34,9
+	.half	.L401-.L400
+	.byte	1,5,26,9
+	.half	.L402-.L401
+	.byte	1,5,32,9
+	.half	.L403-.L402
+	.byte	1,5,51,9
+	.half	.L404-.L403
+	.byte	1,5,49,9
+	.half	.L405-.L404
+	.byte	1,5,24,9
+	.half	.L406-.L405
+	.byte	1,5,1,9
+	.half	.L407-.L406
 	.byte	3,1,1,7,9
-	.half	.L82-.L389
+	.half	.L82-.L407
 	.byte	0,1,1
-.L359:
+.L370:
 	.sdecl	'.debug_ranges',debug,cluster('velocity_cal_right')
 	.sect	'.debug_ranges'
 .L81:
@@ -7250,7 +7328,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Left_velocity',0,5,57,9
-	.word	.L180
+	.word	.L184
 	.byte	1,5,3
 	.word	Left_velocity
 	.byte	0
@@ -7273,7 +7351,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Right_velocity',0,5,57,24
-	.word	.L180
+	.word	.L184
 	.byte	1,5,3
 	.word	Right_velocity
 	.byte	0
@@ -7296,7 +7374,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Left_DataA',0,5,46,8
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Left_DataA
 	.byte	0
@@ -7319,7 +7397,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Left_DataB',0,5,46,20
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Left_DataB
 	.byte	0
@@ -7342,7 +7420,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Left_DataAB',0,5,46,32
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Left_DataAB
 	.byte	0
@@ -7365,7 +7443,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Right_DataA',0,5,47,8
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Right_DataA
 	.byte	0
@@ -7388,7 +7466,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Right_DataB',0,5,47,21
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Right_DataB
 	.byte	0
@@ -7411,7 +7489,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Right_DataAB',0,5,47,34
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Right_DataAB
 	.byte	0
@@ -7434,7 +7512,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Left_DataAB_prev',0,5,49,8
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Left_DataAB_prev
 	.byte	0
@@ -7457,7 +7535,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Left_CntAB',0,5,49,26
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Left_CntAB
 	.byte	0
@@ -7480,7 +7558,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Right_DataAB_prev',0,5,50,8
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Right_DataAB_prev
 	.byte	0
@@ -7503,7 +7581,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Right_CntAB',0,5,50,27
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Right_CntAB
 	.byte	0
@@ -7526,7 +7604,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Left_theta',0,5,52,9
-	.word	.L180
+	.word	.L184
 	.byte	1,5,3
 	.word	Left_theta
 	.byte	0
@@ -7549,7 +7627,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Right_theta',0,5,52,21
-	.word	.L180
+	.word	.L184
 	.byte	1,5,3
 	.word	Right_theta
 	.byte	0
@@ -7572,7 +7650,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Left_Pos_deg',0,5,54,8
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Left_Pos_deg
 	.byte	0
@@ -7595,7 +7673,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Right_Pos_deg',0,5,54,22
-	.word	.L181
+	.word	.L185
 	.byte	1,5,3
 	.word	Right_Pos_deg
 	.byte	0
@@ -7618,7 +7696,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Left_Pos_rad',0,5,55,9
-	.word	.L180
+	.word	.L184
 	.byte	1,5,3
 	.word	Left_Pos_rad
 	.byte	0
@@ -7641,7 +7719,7 @@ Right_velocity_rpm:	.type	object
 	.word	.L54
 	.byte	3
 	.byte	'Right_Pos_rad',0,5,55,23
-	.word	.L180
+	.word	.L184
 	.byte	1,5,3
 	.word	Right_Pos_rad
 	.byte	0
@@ -7650,7 +7728,7 @@ Right_velocity_rpm:	.type	object
 .L118:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
 	.byte	0,0,0
-	.sdecl	'.debug_info',debug,cluster('Left_Pos_rad_prev')
+	.sdecl	'.debug_info',debug,cluster('Left_velocity_mps')
 	.sect	'.debug_info'
 .L119:
 	.word	250
@@ -7663,17 +7741,17 @@ Right_velocity_rpm:	.type	object
 	.byte	12,1,2
 	.word	.L54
 	.byte	3
-	.byte	'Left_Pos_rad_prev',0,5,59,9
-	.word	.L180
+	.byte	'Left_velocity_mps',0,5,59,9
+	.word	.L184
 	.byte	1,5,3
-	.word	Left_Pos_rad_prev
+	.word	Left_velocity_mps
 	.byte	0
-	.sdecl	'.debug_abbrev',debug,cluster('Left_Pos_rad_prev')
+	.sdecl	'.debug_abbrev',debug,cluster('Left_velocity_mps')
 	.sect	'.debug_abbrev'
 .L120:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
 	.byte	0,0,0
-	.sdecl	'.debug_info',debug,cluster('Left_velocity_prev')
+	.sdecl	'.debug_info',debug,cluster('Right_velocity_mps')
 	.sect	'.debug_info'
 .L121:
 	.word	251
@@ -7686,17 +7764,17 @@ Right_velocity_rpm:	.type	object
 	.byte	12,1,2
 	.word	.L54
 	.byte	3
-	.byte	'Left_velocity_prev',0,5,59,28
-	.word	.L180
+	.byte	'Right_velocity_mps',0,5,59,28
+	.word	.L184
 	.byte	1,5,3
-	.word	Left_velocity_prev
+	.word	Right_velocity_mps
 	.byte	0
-	.sdecl	'.debug_abbrev',debug,cluster('Left_velocity_prev')
+	.sdecl	'.debug_abbrev',debug,cluster('Right_velocity_mps')
 	.sect	'.debug_abbrev'
 .L122:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
 	.byte	0,0,0
-	.sdecl	'.debug_info',debug,cluster('Left_velocity_rpm')
+	.sdecl	'.debug_info',debug,cluster('Left_Pos_rad_prev')
 	.sect	'.debug_info'
 .L123:
 	.word	250
@@ -7709,17 +7787,17 @@ Right_velocity_rpm:	.type	object
 	.byte	12,1,2
 	.word	.L54
 	.byte	3
-	.byte	'Left_velocity_rpm',0,5,59,48
-	.word	.L180
+	.byte	'Left_Pos_rad_prev',0,5,61,9
+	.word	.L184
 	.byte	1,5,3
-	.word	Left_velocity_rpm
+	.word	Left_Pos_rad_prev
 	.byte	0
-	.sdecl	'.debug_abbrev',debug,cluster('Left_velocity_rpm')
+	.sdecl	'.debug_abbrev',debug,cluster('Left_Pos_rad_prev')
 	.sect	'.debug_abbrev'
 .L124:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
 	.byte	0,0,0
-	.sdecl	'.debug_info',debug,cluster('Right_Pos_rad_prev')
+	.sdecl	'.debug_info',debug,cluster('Left_velocity_prev')
 	.sect	'.debug_info'
 .L125:
 	.word	251
@@ -7732,20 +7810,20 @@ Right_velocity_rpm:	.type	object
 	.byte	12,1,2
 	.word	.L54
 	.byte	3
-	.byte	'Right_Pos_rad_prev',0,5,60,9
-	.word	.L180
+	.byte	'Left_velocity_prev',0,5,61,28
+	.word	.L184
 	.byte	1,5,3
-	.word	Right_Pos_rad_prev
+	.word	Left_velocity_prev
 	.byte	0
-	.sdecl	'.debug_abbrev',debug,cluster('Right_Pos_rad_prev')
+	.sdecl	'.debug_abbrev',debug,cluster('Left_velocity_prev')
 	.sect	'.debug_abbrev'
 .L126:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
 	.byte	0,0,0
-	.sdecl	'.debug_info',debug,cluster('Right_velocity_prev')
+	.sdecl	'.debug_info',debug,cluster('Left_velocity_rpm')
 	.sect	'.debug_info'
 .L127:
-	.word	252
+	.word	250
 	.half	3
 	.word	.L128
 	.byte	4,1
@@ -7755,17 +7833,17 @@ Right_velocity_rpm:	.type	object
 	.byte	12,1,2
 	.word	.L54
 	.byte	3
-	.byte	'Right_velocity_prev',0,5,60,29
-	.word	.L180
+	.byte	'Left_velocity_rpm',0,5,61,48
+	.word	.L184
 	.byte	1,5,3
-	.word	Right_velocity_prev
+	.word	Left_velocity_rpm
 	.byte	0
-	.sdecl	'.debug_abbrev',debug,cluster('Right_velocity_prev')
+	.sdecl	'.debug_abbrev',debug,cluster('Left_velocity_rpm')
 	.sect	'.debug_abbrev'
 .L128:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
 	.byte	0,0,0
-	.sdecl	'.debug_info',debug,cluster('Right_velocity_rpm')
+	.sdecl	'.debug_info',debug,cluster('Right_Pos_rad_prev')
 	.sect	'.debug_info'
 .L129:
 	.word	251
@@ -7778,68 +7856,114 @@ Right_velocity_rpm:	.type	object
 	.byte	12,1,2
 	.word	.L54
 	.byte	3
-	.byte	'Right_velocity_rpm',0,5,60,50
-	.word	.L180
+	.byte	'Right_Pos_rad_prev',0,5,62,9
+	.word	.L184
+	.byte	1,5,3
+	.word	Right_Pos_rad_prev
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('Right_Pos_rad_prev')
+	.sect	'.debug_abbrev'
+.L130:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('Right_velocity_prev')
+	.sect	'.debug_info'
+.L131:
+	.word	252
+	.half	3
+	.word	.L132
+	.byte	4,1
+	.byte	'../Sensor_input/Encoder.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\user\\AURIX-v1.9.20-workspace\\TC275_SelfDriving\\LKAS_ACC_project\\TriCore Debug (TASKING)\\',0
+	.byte	12,1,2
+	.word	.L54
+	.byte	3
+	.byte	'Right_velocity_prev',0,5,62,29
+	.word	.L184
+	.byte	1,5,3
+	.word	Right_velocity_prev
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('Right_velocity_prev')
+	.sect	'.debug_abbrev'
+.L132:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('Right_velocity_rpm')
+	.sect	'.debug_info'
+.L133:
+	.word	251
+	.half	3
+	.word	.L134
+	.byte	4,1
+	.byte	'../Sensor_input/Encoder.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\user\\AURIX-v1.9.20-workspace\\TC275_SelfDriving\\LKAS_ACC_project\\TriCore Debug (TASKING)\\',0
+	.byte	12,1,2
+	.word	.L54
+	.byte	3
+	.byte	'Right_velocity_rpm',0,5,62,50
+	.word	.L184
 	.byte	1,5,3
 	.word	Right_velocity_rpm
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('Right_velocity_rpm')
 	.sect	'.debug_abbrev'
-.L130:
+.L134:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
 	.byte	0,0,0
 	.sdecl	'.debug_loc',debug,cluster('Encoder_cnt_left')
 	.sect	'.debug_loc'
 .L46:
-	.word	-1,.L47,0,.L148-.L47
+	.word	-1,.L47,0,.L152-.L47
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L154:
+.L158:
 	.word	0,0
-.L152:
+.L156:
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Encoder_cnt_right')
 	.sect	'.debug_loc'
 .L48:
-	.word	-1,.L49,0,.L165-.L49
+	.word	-1,.L49,0,.L169-.L49
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L168:
+.L172:
 	.word	0,0
-.L167:
+.L171:
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Encoder_init')
 	.sect	'.debug_loc'
 .L44:
-	.word	-1,.L45,0,.L131-.L45
+	.word	-1,.L45,0,.L135-.L45
 	.half	2
 	.byte	138,0
 	.word	0,0
+.L144:
+	.word	0,0
+.L142:
+	.word	0,0
 .L140:
-	.word	0,0
-.L138:
-	.word	0,0
-.L136:
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('velocity_cal_left')
 	.sect	'.debug_loc'
 .L50:
-	.word	-1,.L51,0,.L178-.L51
+	.word	-1,.L51,0,.L182-.L51
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('velocity_cal_right')
 	.sect	'.debug_loc'
 .L52:
-	.word	-1,.L53,0,.L179-.L53
+	.word	-1,.L53,0,.L183-.L53
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_frame',debug
 	.sect	'.debug_frame'
-.L390:
+.L408:
 	.word	48
 	.word	-1
 	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
@@ -7847,23 +7971,23 @@ Right_velocity_rpm:	.type	object
 	.sdecl	'.debug_frame',debug,cluster('Encoder_init')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L390,.L45,.L131-.L45
+	.word	.L408,.L45,.L135-.L45
 	.sdecl	'.debug_frame',debug,cluster('Encoder_cnt_left')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L390,.L47,.L148-.L47
+	.word	.L408,.L47,.L152-.L47
 	.byte	8,19,8,20,8,21,8,22,8,23,0,0
 	.sdecl	'.debug_frame',debug,cluster('Encoder_cnt_right')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L390,.L49,.L165-.L49
+	.word	.L408,.L49,.L169-.L49
 	.byte	8,19,8,20,8,21,8,22,8,23,0,0
 	.sdecl	'.debug_frame',debug,cluster('velocity_cal_left')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L390,.L51,.L178-.L51
+	.word	.L408,.L51,.L182-.L51
 	.sdecl	'.debug_frame',debug,cluster('velocity_cal_right')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L390,.L53,.L179-.L53
+	.word	.L408,.L53,.L183-.L53
 	; Module end

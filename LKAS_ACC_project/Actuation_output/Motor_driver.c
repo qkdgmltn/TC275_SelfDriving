@@ -29,6 +29,8 @@
 /*-----------------------------------------------------Includes------------------------------------------------------*/
 /*********************************************************************************************************************/
 #include "Motor_driver.h"
+#include "Control_section/Motor_control.h"
+#include "Sensor_Input/Encoder.h"
 #include "Ifx_Types.h"
 #include "IfxGtm_Tom_Pwm.h"
 
@@ -64,6 +66,18 @@ IfxGtm_Tom_Pwm_Driver g_tomDriverB;                                  /* Timer Dr
 uint32 g_fadeValue = 0;                                             /* Fade value, starting from 0                  */
 uint32 adcResult = 0;
 sint8 g_fadeDir = 1;                                                /* Fade direction variable                      */
+
+float32 error_vel_left;
+float32 error_vel_right;
+
+uint32 error_vel_int_left, error_vel_int_old_left;
+uint32 error_vel_int_right, error_vel_int_old_right;
+
+float32 Vin_left;
+float32 Vin_right;
+
+
+float32 kp = 1, ki = 4;
 
 /*********************************************************************************************************************/
 /*-----------------------------------------------Function Prototypes-------------------------------------------------*/
@@ -179,4 +193,52 @@ void setDutyCycleB(float dutyCycle)
 {
     g_tomConfigB.dutyCycle = dutyCycle * 50000;                              /* Change the value of the duty cycle           */
     IfxGtm_Tom_Pwm_init(&g_tomDriverB, &g_tomConfigB);                /* Re-initialize the PWM                        */
+}
+
+void pid_control_left(void){
+
+    error_vel_left = cur_velo_wheel.v_left - Left_velocity;
+    error_vel_int_left = error_vel_int_old_left + (error_vel_left) * 0.001;
+    error_vel_int_old_left = error_vel_int_left;
+
+    if(error_vel_int_left > 10)
+    {
+        error_vel_int_left = 10;
+    }
+    Vin_left = (kp * error_vel_left + ki * error_vel_int_left);
+
+    if(Vin_left > 11)
+    {
+        Vin_left = 11;
+    }
+    else if(Vin_left < 0)
+    {
+        Vin_left = 0;
+    }
+
+    setDutyCycleA(Vin_left);
+}
+
+void pid_control_right(void){
+
+    error_vel_right = cur_velo_wheel.v_right - Right_velocity;
+    error_vel_int_right = error_vel_int_old_right + (error_vel_right) * 0.001;
+    error_vel_int_old_right = error_vel_int_right;
+
+    if(error_vel_int_right > 10)
+    {
+        error_vel_int_right = 10;
+    }
+    Vin_right = (kp * error_vel_right + ki * error_vel_int_right);
+
+    if(Vin_right > 11)
+    {
+        Vin_right = 11;
+    }
+    else if(Vin_right < 0)
+    {
+        Vin_right = 0;
+    }
+
+    setDutyCycleB(Vin_right);
 }

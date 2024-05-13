@@ -47,11 +47,15 @@ static void AppNoTask(void){
 static void AppTask1ms(void)
 {
     stTestCnt.u32nuCnt1ms++;
-    setDutyCycleA(0.5);
-    setDutyCycleB(0.5);
+
+//    setDutyCycleA(0.5);
+//    setDutyCycleB(0.5);
+
     velocity_cal_left();
     velocity_cal_right();
 
+    pid_control_left();
+    pid_control_right();
 }
 
 static void AppTask10ms(void)
